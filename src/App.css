@@ -1,7 +1,10 @@
 :root {
   --body-color: #E8E8EA;
   --yello: #FFD341;
-  --base-font-color: #fff;
+  --base-font-color: #000;
+  --large-text-size: 3rem;
+  --medium-text-size: 2rem;
+  --small-text-size: 1.2rem;
 }
 html {
   font-size: 62.5%;
@@ -25,6 +28,7 @@ body {
   font-family: "anonymous-pro", monospace;
   font-weight: 400;
   font-style: normal;
+  font-size: var(--small-text-size);
 }
 
 /* Reset default styles for heading elements */

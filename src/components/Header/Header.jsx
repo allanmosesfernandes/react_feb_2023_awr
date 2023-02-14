@@ -1,8 +1,20 @@
-import React from 'react'
-
+import React from 'react';
+import { Outlet } from 'react-router-dom';
+import "./Header.scss";
 const Header = () => {
   return (
-    <div>Header</div>
+    <>
+    <nav>
+        <div className="left">
+            XYZ
+        </div>
+        <div className="logo">
+            ankan c.
+        </div>
+    </nav>
+    
+    <Outlet />
+    </>
   )
 }
 
