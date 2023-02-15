@@ -95,3 +95,11 @@ nav {
 .button-4:-webkit-details-marker {
   display: none;
 }
+
+@media only screen and (max-width: 767px) {
+  //code goes here
+  
+  nav {
+    padding: 1.5rem;
+  }
+}

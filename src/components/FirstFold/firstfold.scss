@@ -30,6 +30,7 @@
 .photo__by {
     display: flex;
     flex-direction: column;
+    line-height: 1.4;
 }
 
 .text__left {
@@ -72,12 +73,55 @@
 .photo__by {
     margin-top: 10%;
 }
+
 .body-copy {
     font-size: var(--small-text-size);
-    line-height: 1.5;
+    line-height: 1.2;
 }
 
 @media only screen and (max-width: 767px) {
-  //code goes here
-    
+    //code goes here
+
+
+    .hide_on_mobile {
+        display: none;
+    }
+
+    .first-fold {
+        display: flex;
+        flex-direction: column;
+        padding: 1.5rem;
+    }
+
+    .text__left {
+        order: 2;
+    }
+
+    .photo__by {
+        order: 3;
+    }
+
+    .image__center {
+        height: 70vh;
+        .ankan_img {
+
+            object-fit: cover;
+            object-position: top;
+        }
+        .thread {
+            right: -20%;
+        }
+    }
+
+
+.future-of-fashion {
+    font-size: 8rem;
+    line-height: 1;
+
+    p {
+        margin: 2rem 0;
+    }
+}
+
+
 }

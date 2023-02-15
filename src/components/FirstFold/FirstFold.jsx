@@ -33,7 +33,7 @@ const FirstFold = () => {
       </div>
       <div className="photo__by">
         <strong>PHOTO BY:</strong>
-        <span>Pravin Kumar</span>
+        <span>PK Photography</span>
       </div>
 
     </div>

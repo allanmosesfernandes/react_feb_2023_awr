@@ -16,7 +16,7 @@ const Header = () => {
         </div>
         <div className="header-right">
           <button className="button-4">BLOG</button>
-          <Link>Contact</Link>
+          <Link className='hide_on_mobile'>Contact</Link>
         </div>
     </nav>
     
