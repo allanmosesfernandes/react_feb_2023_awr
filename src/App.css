@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;400;700&display=swap');
+
 :root {
   --body-color: #E8E8EA;
   --yello: #FFD341;
@@ -25,7 +27,7 @@ body {
   padding: 0;
   background-color: var(--body-color);
   color: var(--base-font-color);
-  font-family: "anonymous-pro", monospace;
+  font-family: 'Inconsolata', monospace;
   font-weight: 400;
   font-style: normal;
   font-size: var(--small-text-size);

@@ -1,5 +1,7 @@
 import React from 'react';
-import { Outlet } from 'react-router-dom';
+import { Link, Outlet } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
 import "./Header.scss";
 const Header = () => {
   return (
@@ -10,6 +12,10 @@ const Header = () => {
         </div>
         <div className="logo">
             ankan c.
+        </div>
+        <div className="header-right">
+          <button className="button-4">BLOG</button>
+          <Link>Contact</Link>
         </div>
     </nav>
     
