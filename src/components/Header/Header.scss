@@ -10,6 +10,8 @@ nav {
     align-items: center;
     padding: 2rem 3rem;
     font-family: 'Inconsolata', monospace;
+    position: sticky;
+    top: 0;
 }
 
 
@@ -24,6 +26,8 @@ nav {
   align-items: center;
   gap: 2rem;
   font-family: 'Inconsolata', monospace;
+  text-transform:uppercase;
+  letter-spacing: 1px;
 
 }
 
@@ -40,6 +44,7 @@ nav {
   display: inline-block;
   font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
   font-size: 14px;
+  letter-spacing: 1px;
   font-weight: 500;
   line-height: 20px;
   list-style: none;

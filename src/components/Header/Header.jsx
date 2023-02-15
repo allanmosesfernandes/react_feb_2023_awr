@@ -8,9 +8,10 @@ const Header = () => {
     <>
     <nav>
         <div className="left">
-            XYZ
+            <FontAwesomeIcon icon={faBars} />
         </div>
         <div className="logo">
+          <Link to="/"></Link>
             ankan c.
         </div>
         <div className="header-right">

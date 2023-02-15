@@ -3,7 +3,9 @@ import "./firstfold.scss";
 
 const FirstFold = () => {
   return (
-    <div>FirstFold</div>
+    <div className='wrapper first-fold'>
+
+    </div>
   )
 }
 
