@@ -1,3 +1,36 @@
 .first-fold {
-    height: 100vh;
+    height: 90vh;
+    padding: 2rem 3rem;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    font-size: var(--medium-text-size);
+}
+
+.future-of-fashion {
+    font-family: gothic;
+    font-size: 10rem;
+    margin: 0;
+    line-height: 1;
+
+    p {
+        margin: 3rem 0 5rem 0;
+    }
+}
+
+
+.picture__details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.picture__details_left,
+.picture__details_right {
+    display: flex;
+    flex-direction: column;
+}
+
+.text__left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
