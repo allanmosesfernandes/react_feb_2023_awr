@@ -1,5 +1,7 @@
 import React from 'react';
 import "./firstfold.scss";
+import ankan from "../../assets/images/ankan_bg.jpg";
+import thread from "../../assets/images/thread.svg";
 
 const FirstFold = () => {
   return (
@@ -22,6 +24,16 @@ const FirstFold = () => {
       <div className="body-copy">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur sunt distinctio error repellat. Libero dolor tenetur aliquid mollitia animi, dolore quidem repellendus quisquam asperiores maxime. Nemo officiis nulla corporis dolores.
       </div>
+      </div>
+      <div className="image__center">
+        <img src={ankan} alt="ankan" className='ankan_img'/>
+        <span>
+          <img src={thread} alt="thread" className='thread'/>
+        </span>
+      </div>
+      <div className="photo__by">
+        <p>PHOTO BY:</p>
+        
       </div>
 
     </div>
