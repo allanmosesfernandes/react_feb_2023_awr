@@ -1,15 +1,26 @@
+.second__fold {
+    padding: 3rem;
+}
+
+
+.attribute__card__details {
+    border-top: 3px solid red;
+    padding-top: 1rem;
+}
 .attribute__card__container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
-
+    width: 100%;
+    margin: 2rem 0;
 }
 
 .attribute__card__white {
-    background-color: bisque;
+    background-color: #D8D8D8;
     display: flex;
     flex-direction: column;
     color: #000;
+    padding: 2rem;
 }
 
 .attribute__card__black {
@@ -25,21 +36,22 @@
 /* CSS */
 .button-74 {
   background-color: #fbeee0;
-  border: 2px solid #422800;
+  border: 2px solid #000000;
   border-radius: 30px;
-  box-shadow: #422800 4px 4px 0 0;
   color: #422800;
   cursor: pointer;
   display: inline-block;
   font-weight: 600;
-  font-size: 18px;
+  font-size: 16px;
   padding: 0 18px;
-  line-height: 50px;
+  line-height: 2;
   text-align: center;
   text-decoration: none;
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
+  width: 30%;
+  margin: 3rem 0;
 }
 
 .button-74:hover {

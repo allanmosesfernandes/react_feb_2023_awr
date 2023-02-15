@@ -1,11 +1,11 @@
 import React from 'react';
 import "./second-fold.scss";
 
-const secondFold = () => {
+const SecondFold = () => {
   return (
     <div className='wrapper second__fold'>
         <div className="attribute__card__container">
-            <div className="attribute__card__white">
+            <div className="attribute__card__black">
                 <div className="attribute__card__details">
                     <div className="details__left">
                         <strong>Lorem ipsum dolor sit amet</strong>
@@ -20,7 +20,7 @@ const secondFold = () => {
                 <h4>Fashion Merchandiser</h4>
                 <button className="button-74">LEARN MORE </button>
             </div>
-            <div className="attribute__card__black">
+            <div className="attribute__card__white">
                                 <div className="attribute__card__details">
                     <div className="details__left">
                         <strong>Lorem ipsum dolor sit amet</strong>
@@ -40,4 +40,4 @@ const secondFold = () => {
   )
 }
 
-export default secondFold
+export default SecondFold
