@@ -82,6 +82,10 @@
 @media only screen and (max-width: 767px) {
     //code goes here
 
+    .picture__details {
+        display: flex;
+        justify-content: space-between;
+    }
 
     .hide_on_mobile {
         display: none;
@@ -103,25 +107,27 @@
 
     .image__center {
         height: 70vh;
+
         .ankan_img {
 
             object-fit: cover;
             object-position: top;
         }
+
         .thread {
             right: -20%;
+            width: 80%;
+            top: 23%;
         }
     }
 
 
-.future-of-fashion {
-    font-size: 8rem;
-    line-height: 1;
-
-    p {
-        margin: 2rem 0;
+    .future-of-fashion {
+        font-size: 5rem;
+        line-height: 1;
+        p {
+            margin: 2rem 0;
+        }
     }
-}
-
 
 }
