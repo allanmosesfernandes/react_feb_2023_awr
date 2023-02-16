@@ -3,10 +3,11 @@ import "./firstfold.scss";
 import ankan from "../../assets/images/ankan_bg.jpg";
 import thread from "../../assets/images/thread.svg";
 import SecondFold from '../SecondFold/secondFold';
+import Brands from '../Brands/Brands';
 const FirstFold = () => {
   return (
     <>
-          <div className='wrapper first-fold'>
+    {/* <div className='wrapper first-fold'>
       <div className="text__left">
         <div className="picture__details">
           <div className="picture__details_left">
@@ -37,8 +38,9 @@ const FirstFold = () => {
         <span>PK Photography</span>
       </div>
 
-    </div>
-    <SecondFold />
+    </div> */}
+    {/* <SecondFold /> */}
+    <Brands />
     </>
 
   )
