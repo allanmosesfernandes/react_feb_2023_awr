@@ -13,6 +13,7 @@ const SecondFold = () => {
                     </div>
                     <div className="details__right">
                         <div className="status__div">
+                            <div class="glowing-dot"></div>
 
                         </div>
                     </div>

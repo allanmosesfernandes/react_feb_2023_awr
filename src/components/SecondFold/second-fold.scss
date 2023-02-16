@@ -32,6 +32,11 @@
     margin: 2rem 0;
 }
 
+.attribute__card__details {
+    display: flex;
+    justify-content: space-between;
+    align-items: ce;
+}
 .attribute__card__white {
     background-color: #D8D8D8;
     display: flex;
@@ -93,6 +98,26 @@
 .button-74:active {
     box-shadow: #422800 2px 2px 0 0;
     transform: translate(2px, 2px);
+}
+.glowing-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: rgb(102, 255, 0);
+  box-shadow: 0 0 10px #fff;
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 #fff;
+  }
+  50% {
+    box-shadow: 0 0 0 10px rgba(255, 255, 255, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+  }
 }
 
 @media (min-width: 768px) {
