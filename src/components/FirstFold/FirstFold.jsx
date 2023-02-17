@@ -4,6 +4,7 @@ import ankan from "../../assets/images/ankan_bg.jpg";
 import thread from "../../assets/images/thread.svg";
 import SecondFold from '../SecondFold/secondFold';
 import Brands from '../Brands/Brands';
+import Writing from '../Writing/writing';
 const FirstFold = () => {
   return (
     <>
@@ -41,6 +42,7 @@ const FirstFold = () => {
     </div> 
     <SecondFold />
     <Brands />
+    <Writing />
     </>
 
   )

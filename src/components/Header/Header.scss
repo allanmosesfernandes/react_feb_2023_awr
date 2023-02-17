@@ -3,6 +3,12 @@
   src: url("../../assets/fonts/gothic.ttf");
 }
 
+@font-face {
+  font-family: sf-pro;
+  src: url("../../assets/fonts/sf-pro-text-regular.woff");
+}
+
+
 nav {
     display: flex;
     font-size: var(--large-text-size);

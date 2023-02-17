@@ -3,7 +3,7 @@ import "./writing.scss";
 const Writing = () => {
   return (
     <div className="wrapper writing__fold">
-        <h3>Writing Blog</h3>
+        <p className="future-of-fashion">writings</p>
     </div>
   )
 }
