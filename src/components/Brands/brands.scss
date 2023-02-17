@@ -1,9 +1,9 @@
 .brands__container {
-    padding: 3rem;
+    padding: var(--body-padding);
 
     h4 {
-        font-size: 3rem;
-        font-family: sf-pro;
+        font-size: var(--large-text-size);
+        font-family: sf-pro, Arial, sans-serif;
         margin-bottom: 4rem;
     }
 }
@@ -14,10 +14,8 @@
     
     img {
     position: absolute;
-
     left: -19px;
     top: -7px;
-       
     }
 }
 .brand__box {
@@ -44,7 +42,6 @@
   //code goes here
 
   .brands__container {
-    padding: 1rem;
 
     h4 {
         font-size: 2.5rem;

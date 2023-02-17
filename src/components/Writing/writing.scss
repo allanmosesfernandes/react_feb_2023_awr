@@ -1,0 +1,32 @@
+@font-face {
+    font-family: seasons;
+    src: url("../../assets/fonts/seasons-tilt.otf");
+}
+
+.writing__fold {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: black;
+    color: white;
+    align-items: center;
+    padding: 4rem 0;
+}
+.cursive {
+    font-family: seasons;
+    font-size: var(--large-text-size);
+}
+
+.blog__body__copy {
+    text-transform: uppercase;
+    font-family: sf-pro, Arial, sans-serif;
+    margin: 0;
+    font-size: var(--extra-large-text);
+    line-height: 1.5;
+    margin-bottom: -20px;
+}
+
+.cursive__inline {
+     font-family: seasons;
+     text-transform: lowercase;
+}

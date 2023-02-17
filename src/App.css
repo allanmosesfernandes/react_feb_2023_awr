@@ -4,9 +4,11 @@
   --body-color: #E8E8EA;
   --yello: #FFD341;
   --base-font-color: #000;
+  --extra-large-text: 8rem;
   --large-text-size: 3rem;
   --medium-text-size: 2rem;
   --small-text-size: 1.6rem;
+  --body-padding: 3rem;
 }
 
 @media only screen and (max-width: 600px) {
@@ -15,6 +17,7 @@
   --large-text-size: 3rem;
   --medium-text-size: 1.5rem;
   --small-text-size: 1.6rem;
+  --body-padding: 1rem;
 }
 }
 
@@ -42,6 +45,10 @@ body {
   font-style: normal;
   font-size: var(--small-text-size);
   overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+
 }
 
 /* Reset default styles for heading elements */
