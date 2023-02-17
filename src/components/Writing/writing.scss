@@ -94,7 +94,16 @@
 }
 
 @media only screen and (max-width: 600px) {
-
+.blog__preview__container {
+    margin: 10rem 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    gap: 3rem;
+    width: 90%;
+    font-family: "sf-pro", Arial, sans-serif;
+}
     //code goes here
     .rotating__star {
         right: -20px;
