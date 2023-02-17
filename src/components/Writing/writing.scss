@@ -24,9 +24,33 @@
     font-size: var(--extra-large-text);
     line-height: 1.5;
     margin-bottom: -20px;
+    position: relative;
 }
 
 .cursive__inline {
      font-family: seasons;
      text-transform: lowercase;
+}
+
+.rotating__star {
+    position: absolute;
+    right: -20px;
+    top: 8px;
+    width: 50px;
+    animation: spin  4s linear infinite;
+}
+
+
+
+@-moz-keyframes spin { 
+    100% { -moz-transform: rotate(360deg); } 
+}
+@-webkit-keyframes spin { 
+    100% { -webkit-transform: rotate(360deg); } 
+}
+@keyframes spin { 
+    100% { 
+        -webkit-transform: rotate(360deg); 
+        transform:rotate(360deg); 
+    } 
 }
