@@ -14,6 +14,7 @@
 @media only screen and (max-width: 600px) {
 
   :root {
+  --extra-large-text: 3rem;
   --large-text-size: 3rem;
   --medium-text-size: 1.5rem;
   --small-text-size: 1.6rem;
