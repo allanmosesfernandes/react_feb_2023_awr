@@ -74,12 +74,23 @@
     font-family: "sf-pro", Arial, sans-serif;
 }
 
+.blog__preview__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
 .blog__preview__div {
 
     img {
         max-width: 100%;
     }
+}
+
+.blog__preview__category {
+    border: 1px solid white;
+    font-style: italic;
+    padding: 5px;
 }
 
 @media only screen and (max-width: 600px) {
