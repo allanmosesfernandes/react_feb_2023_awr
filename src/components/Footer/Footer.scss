@@ -30,6 +30,12 @@ footer {
         padding: 3rem;
         background: #ff5757;
         border-radius: 50%;
+        transition: all 0.3s ease-in;
+
+        &:hover {
+            background-color: #f2f2f2;
+            color: #ff5757;
+        }
     }
 }
 
