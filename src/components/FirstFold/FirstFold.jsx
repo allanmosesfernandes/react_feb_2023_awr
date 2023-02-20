@@ -5,10 +5,11 @@ import thread from "../../assets/images/thread.svg";
 import SecondFold from '../SecondFold/secondFold';
 import Brands from '../Brands/Brands';
 import Writing from '../Writing/writing';
+import Footer from '../Footer/Footer';
 const FirstFold = () => {
   return (
     <>
-    {/* <div className='wrapper first-fold'>
+     <div className='wrapper first-fold'>
       <div className="text__left">
         <div className="picture__details">
           <div className="picture__details_left">
@@ -40,9 +41,10 @@ const FirstFold = () => {
       </div>
 
     </div> 
-    <SecondFold />
-    <Brands /> */}
+    <SecondFold /> 
+    <Brands />
     <Writing />
+    <Footer />
     </>
 
   )

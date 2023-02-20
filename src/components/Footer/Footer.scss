@@ -1,0 +1,40 @@
+footer {
+    background-color: #000000;
+    color: white;
+    margin: -20px 0;
+    padding: 3rem;
+
+    .footer__hello {
+        font-family: sf-pro, Arial, sans-serif;
+        line-height: 1.5;
+        font-size: 18rem;
+        margin: 0;
+    }
+}
+
+.footer__links__email {
+    border-top: 1px solid #f2f2f2;
+    padding: 2rem 0;
+    font-size: var(--extra-large-text);
+    font-family: 'sf-pro';
+    margin: 0;
+}
+
+.footer__links__social {
+    display: flex;
+
+    border-top: 1px solid #f2f2f2;
+    padding: 0;
+
+    .social_icon_container {
+        padding: 3rem;
+        background: #ff5757;
+        border-radius: 50%;
+    }
+}
+
+.socials {
+    border-right: 1px solid;
+    padding: 5rem;
+
+}
