@@ -19,23 +19,14 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border: 1px solid;
 
     .footer__links__hyperlinks {
         display: flex;
         gap: 3rem;
         padding: 3rem;
- font-size: var(--medium-text-size);
+        font-size: var(--medium-text-size);
 
     }
-}
-
-.footer__links__email {
-    border-top: 1px solid #f2f2f2;
-    padding: 2rem 0;
-    font-size: var(--large-text-size);
-    font-family: 'sf-pro';
-    margin: 0;
 }
 
 .footer__links__social {
@@ -56,9 +47,8 @@ footer {
 }
 
 .socials {
-    border-left: 1px solid;
     padding: 5rem;
-
+    cursor: pointer;
 }
 
 .created_by {
@@ -80,6 +70,7 @@ footer {
     align-items: center;
     justify-content: center;
     padding: 3rem;
+    cursor: pointer;
 
 }
 
@@ -91,17 +82,19 @@ footer {
     align-items: center;
 
 }
-
-@media only screen and (max-width: 767px) {
 .terms__conditions {
     text-align: center;
 }
+@media only screen and (max-width: 767px) {
+
     .socials {
         border: 1px solid;
         padding: 2rem;
         margin: 1rem 0;
     }
-
+.page_not_found p {
+    font-size: var(--medium-text-size) !important;
+}
     //code goes here
     footer {
 
