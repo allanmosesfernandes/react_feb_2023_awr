@@ -6,18 +6,26 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
 import { Link } from 'react-router-dom';
 import AF from "../../assets/images/AF.svg"
-
+import Top from "../../assets/images/top.svg"
 
 
 
 const Footer = () => {
 
-    let currentYear = new Date().getFullYear();
+const goToTopHandler = () => {
+    window.scrollTo(0,0);
+}
+let currentYear = new Date().getFullYear();
   return (
     <footer>
-        <div className="go-top-container">
-
+        
+        <div className="go-top-container" onClick={goToTopHandler}>
+            <div className="arrow_div">
+                <img src={Top} alt="Top Arrow" />
+            </div>
+            <p>Back to Top</p>
         </div>
+
         <p className="footer__hello">
             Say Hello <img src={Arrow} alt="Arrow" />
         </p>

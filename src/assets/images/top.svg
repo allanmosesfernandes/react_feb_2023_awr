@@ -1,0 +1,9 @@
+<svg class="scroll-down-arrow rel z1" width="24" height="38" viewBox="0 0 24 38" fill="none"
+    xmlns="http://www.w3.org/2000/svg">
+    <path d="M12.0845 2.90607L12.0845 36.4277" stroke="#fff" stroke-width="3" stroke-miterlimit="10"
+        stroke-linecap="round" stroke-linejoin="round"></path>
+    <path d="M12.0842 2.91673L2.75684 12.2441" stroke="#fff" stroke-width="3" stroke-miterlimit="10"
+        stroke-linecap="round" stroke-linejoin="round"></path>
+    <path d="M21.6116 12.2444L12.2842 2.91699" stroke="#fff" stroke-width="3" stroke-miterlimit="10"
+        stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>

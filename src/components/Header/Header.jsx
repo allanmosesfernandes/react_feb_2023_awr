@@ -6,7 +6,7 @@ import "./Header.scss";
 const Header = () => {
   return (
     <>
-    <nav>
+    <nav id='#nav'>
         <div className="left">
             <FontAwesomeIcon icon={faBars} />
         </div>
