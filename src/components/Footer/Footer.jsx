@@ -5,9 +5,19 @@ import { faLinkedinIn, faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
 import { Link } from 'react-router-dom';
+import AF from "../../assets/images/AF.svg"
+
+
+
+
 const Footer = () => {
+
+    let currentYear = new Date().getFullYear();
   return (
-    <footer className=''>
+    <footer>
+        <div className="go-top-container">
+
+        </div>
         <p className="footer__hello">
             Say Hello <img src={Arrow} alt="Arrow" />
         </p>
@@ -43,6 +53,17 @@ const Footer = () => {
                         
                     </div>
                 </div>
+            </div>
+        </div>
+
+        <div className="terms__conditions">
+            <p className="terms">
+               ©<strong> {currentYear} All rights reserved.</strong> 
+            </p>
+            <div className="created_by">
+                    Created by <Link to="https://allanfernandes.dev/">
+                    <img src={AF} alt="Allan Fernandes"/>
+                    </Link>
             </div>
         </div>
     </footer>

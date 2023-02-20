@@ -3,12 +3,30 @@ footer {
     color: white;
     margin: -20px 0;
     padding: 3rem;
+    font-family: 'sf-pro';
 
     .footer__hello {
-        font-family: sf-pro, Arial, sans-serif;
         line-height: 1.5;
         font-size: 18rem;
         margin: 0;
+    }
+}
+
+
+.footer__links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid;
+
+    .footer__links__hyperlinks {
+        display: flex;
+        gap: 3rem;
+        padding: 3rem;
+
+        a {
+            font-size: var(--large-text-size);
+        }
     }
 }
 
@@ -22,8 +40,6 @@ footer {
 
 .footer__links__social {
     display: flex;
-
-    border-top: 1px solid #f2f2f2;
     padding: 0;
 
     .social_icon_container {
@@ -40,7 +56,17 @@ footer {
 }
 
 .socials {
-    border-right: 1px solid;
+    border-left: 1px solid;
     padding: 5rem;
 
+}
+
+.created_by {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+        width: 50px;
+    }
 }
