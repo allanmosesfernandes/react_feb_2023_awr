@@ -8,7 +8,7 @@ import Writing from '../Writing/writing';
 const FirstFold = () => {
   return (
     <>
-    <div className='wrapper first-fold'>
+    {/* <div className='wrapper first-fold'>
       <div className="text__left">
         <div className="picture__details">
           <div className="picture__details_left">
@@ -41,7 +41,7 @@ const FirstFold = () => {
 
     </div> 
     <SecondFold />
-    <Brands />
+    <Brands /> */}
     <Writing />
     </>
 
