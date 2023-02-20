@@ -23,7 +23,7 @@ let currentYear = new Date().getFullYear();
             <div className="arrow_div">
                 <img src={Top} alt="Top Arrow" />
             </div>
-            <p>Back to Top</p>
+            
         </div>
 
         <p className="footer__hello">
@@ -69,9 +69,7 @@ let currentYear = new Date().getFullYear();
                ©<strong> {currentYear} All rights reserved.</strong> 
             </p>
             <div className="created_by">
-                    Created by <Link to="https://allanfernandes.dev/">
-                    <img src={AF} alt="Allan Fernandes"/>
-                    </Link>
+
             </div>
         </div>
     </footer>

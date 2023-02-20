@@ -2,7 +2,7 @@ footer {
     background-color: #000000;
     color: white;
     margin: -20px 0;
-    padding: 3rem;
+    padding: var(--body-padding);
     font-family: 'sf-pro';
 
     .footer__hello {
@@ -11,7 +11,9 @@ footer {
         margin: 0;
     }
 }
-
+.created_by span {
+    text-decoration: underline;
+}
 
 .footer__links {
     display: flex;
@@ -23,17 +25,15 @@ footer {
         display: flex;
         gap: 3rem;
         padding: 3rem;
+ font-size: var(--medium-text-size);
 
-        a {
-            font-size: var(--large-text-size);
-        }
     }
 }
 
 .footer__links__email {
     border-top: 1px solid #f2f2f2;
     padding: 2rem 0;
-    font-size: var(--extra-large-text);
+    font-size: var(--large-text-size);
     font-family: 'sf-pro';
     margin: 0;
 }
@@ -74,7 +74,7 @@ footer {
 .arrow_div {
     width: 50px;
     height: 50px;
-    background: linear-gradient(180deg, #202022 2%, #202022 49.84%);
+    border: 2px solid #ff5757;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -90,4 +90,69 @@ footer {
     width: max-content;
     align-items: center;
 
+}
+
+@media only screen and (max-width: 767px) {
+.terms__conditions {
+    text-align: center;
+}
+    .socials {
+        border: 1px solid;
+        padding: 2rem;
+        margin: 1rem 0;
+    }
+
+    //code goes here
+    footer {
+
+        .footer__hello {
+            font-size: 5rem;
+            margin: 2rem 0 1rem 0;
+        }
+    }
+
+    .footer__links {
+        flex-direction: column-reverse;
+        border: none;
+
+        .footer__links__hyperlinks {
+            flex-direction: column;
+            gap: 3rem;
+            padding: 3rem;
+            text-align: center;
+        }
+    }
+
+    .footer__links__social {
+        display: flex;
+        padding: 0;
+
+        .social_icon_container {
+            padding: 1rem;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .fa-2x {
+            font-size: 1em;
+        }
+    }
+
+    .footer__hello {
+        img {
+            width: 50px;
+        }
+    }
+
+    .arrow_div {
+        padding: 0;
+        margin: 1rem 0;
+        img {
+            width: 15px;
+            height: 15px;
+        }
+    }
 }
