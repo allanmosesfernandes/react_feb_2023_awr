@@ -2,12 +2,15 @@ import { React, useState, useEffect } from "react";
 import "./writing.scss";
 import Star from "../../assets/images/star.png";
 import BlogImage from "../../assets/images/blog_preview.webp";
+import { Link, Navigate } from "react-router-dom";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 const Writing = () => {
   const [posts, setPosts] = useState([]);
   const [imageUrls, setImageUrls] = useState([]);
   const [categoryNames, setCategoryNames] = useState([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
     axios
@@ -73,7 +76,7 @@ const Writing = () => {
           const options = { month: 'short', day: 'numeric', year: 'numeric' };
           const formattedDate = date.toLocaleString('en-US', options);
           return (
-            <div className="blog__preview__div" key={index}>
+            <div className="blog__preview__div" key={index} onClick={() => navigate(`/blog/${post.slug}`)}>
               <img src={imageUrl} alt="" />
               <p className="blog__preview__title">{post.title.rendered}</p>
               <div className="blog__preview__bottom">
