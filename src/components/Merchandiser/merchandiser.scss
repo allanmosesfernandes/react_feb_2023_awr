@@ -17,6 +17,8 @@
         color: #7b7b7b;
         font-family: neue-bold;
         font-size: var(--large-text-size);
+                        line-height: 1.5;
+
         strong {
             color: #000000;
         }
@@ -56,6 +58,7 @@
 
         p {
             font-size: 2rem;
+
         }
     }
 
