@@ -7,6 +7,7 @@ import axios from "axios";
 const Writing = () => {
   const [posts, setPosts] = useState([]);
   const [imageUrls, setImageUrls] = useState([]);
+  const [categoryNames, setCategoryNames] = useState([]);
 
   useEffect(() => {
     axios
@@ -36,15 +37,27 @@ const Writing = () => {
           .catch((error) => {
             console.error(error);
           });
+        // retrieve category names
+        const categoryPromises = response.data.map((post) =>
+          axios.get(
+            `http://allanmoses.ninja/wp-json/wp/v2/categories/${post.categories[1]}`
+          )
+        );
+        Promise.all(categoryPromises)
+          .then((responses) => {
+            const names = responses.map((response) => response.data.name);
+            setCategoryNames(names);
+          })
+          .catch((error) => {
+            console.error(error);
+          });
       })
       .catch((error) => {
         console.error(error);
       });
   }, []);
-
   return (
     <div className="writing__fold">
-      <p className="cursive">Writing Blog</p>
       <p className="blog__body__copy">
         I've got <span><img src={Star} alt="Star" className="rotating__star" /> </span>
       </p>
@@ -55,14 +68,18 @@ const Writing = () => {
       <div className="blog__preview__container">
         {posts.map((post, index) => {
           const imageUrl = imageUrls[index];
+          const dateString = post.date.split("T")[0];
+          const date = new Date(dateString);
+          const options = { month: 'short', day: 'numeric', year: 'numeric' };
+          const formattedDate = date.toLocaleString('en-US', options);
           return (
             <div className="blog__preview__div" key={index}>
               <img src={imageUrl} alt="" />
               <p className="blog__preview__title">{post.title.rendered}</p>
               <div className="blog__preview__bottom">
-                <div className="blog__preview__date">- {post.date}</div>
+                <div className="blog__preview__date"><span><hr /></span>{formattedDate}</div>
                 <div className="blog__preview__category">
-                  {post.categories[0]}
+                  {categoryNames[index]}
                 </div>
               </div>
             </div>
