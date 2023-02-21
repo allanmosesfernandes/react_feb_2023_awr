@@ -11,7 +11,7 @@ const FirstFold = () => {
     <>
       <div className='wrapper first-fold'>
       <div className="text__left">
-        <div className="picture__details">
+        {/* <div className="picture__details">
           <div className="picture__details_left">
             <strong>COLLABORATION WITH:</strong>
             <span>GUCCI HANDBAGS</span>
@@ -20,7 +20,7 @@ const FirstFold = () => {
             <strong>INSIDE THE HOUSE:</strong>
             <span>FASHION SHOW</span>
           </div>
-        </div> 
+        </div>  */}
        <div className="future-of-fashion">
         <p>the future of <br />fashion</p>
       </div>
@@ -36,8 +36,8 @@ const FirstFold = () => {
         </span> 
       </div>
       <div className="photo__by">
-        <strong>PHOTO BY:</strong>
-        <span>PK Photography</span>
+        {/* <strong>PHOTO BY:</strong>
+        <span>PK Photography</span> */}
       </div>
 
     </div> 
