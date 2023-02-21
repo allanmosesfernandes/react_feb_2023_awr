@@ -1,13 +1,15 @@
 import React from 'react'
 import "./merchandiser.scss"
-import Star from "../../assets/images/star.png";
+import Star from "../../assets/images/BlackStar.svg";
 
 const Merchandiser = () => {
 return (
 <div className='wrapper merchandiser__container'>
   <h2>Fashion Merchandiser</h2>
   <div className="merchandiser__content">
+  <img src={Star} className="black__star" />
     <div className="merch__text">
+
       <p>
         <strong>A strategist by heart,</strong> I specialize in buying & merchandising with 5+ years of work experience with premium
         international brands and currently widening my portfolio in the luxury sphere as a buyer.
