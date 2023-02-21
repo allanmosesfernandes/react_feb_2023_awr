@@ -11,8 +11,8 @@ const Header = () => {
             <FontAwesomeIcon icon={faBars} />
         </div>
         <div className="logo">
-          <Link to="/"></Link>
-            ankan c.
+          <Link to="/">ankan c.</Link>
+            
         </div>
         <div className="header-right">
           <button className="button-4">BLOG</button>

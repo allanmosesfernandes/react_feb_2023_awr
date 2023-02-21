@@ -1,11 +1,17 @@
 @font-face {
-  font-family: gothic;
+  font-family: gothic,sans-serif;
   src: url("../../assets/fonts/gothic.ttf");
 }
 
 @font-face {
-  font-family: sf-pro;
+  font-family: sf-pro,sans-serif;
   src: url("../../assets/fonts/sf-pro-text-regular.woff");
+}
+
+
+@font-face {
+  font-family: neue-bold,sans-serif;
+  src: url("../../assets/fonts/NeueMachina-Regular.otf");
 }
 
 

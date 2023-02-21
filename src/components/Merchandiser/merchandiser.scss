@@ -1,0 +1,51 @@
+.merchandiser__container {
+    padding: var(--body-padding);
+    display: flex;
+    flex-direction: column;
+
+    h2 {
+        font-size: var(--extra-large-text);
+        border-top: 2px solid;
+        border-bottom: 2px solid;
+        width: 100%;
+    }
+}
+.merch__text {
+    position: relative;
+    p {
+        font-size: var(--medium-text-size);
+        color: #7b7b7b;
+        font-family: neue-bold;
+        font-size: var(--large-text-size);
+        strong {
+            color: #000000;
+        }
+    }
+}
+.merchandiser__content {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 0;
+    justify-content: center;
+    align-items: center;
+    .merch__text {
+        width: 60%;
+        align-self: center;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+  //code goes here
+  .merchandiser__content {
+    flex-direction: column;
+    padding: 1rem 0;
+
+    .merch__text {
+        width: 90%;
+
+        p {
+            font-size: 2rem;
+        }
+    }
+}
+}

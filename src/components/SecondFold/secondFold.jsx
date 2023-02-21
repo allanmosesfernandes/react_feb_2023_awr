@@ -1,6 +1,8 @@
 import React from 'react';
 import "./second-fold.scss";
 import Arrow from "../../assets/images/arrow.svg";
+import { Link } from 'react-router-dom';
+
 
 const SecondFold = () => {
   return (
@@ -21,8 +23,9 @@ const SecondFold = () => {
                 </div>
                 <h4 className="attribute__post">Fashion Merchandiser</h4>
                 <img src={Arrow} alt="Arrow" className='what_arrow'/>
-
-                <button className="button-50">Learn More</button>
+                
+                <Link to="fashion-merchandiser"><button className="button-50">Learn More</button></Link>
+                
 
             </div>
             <div className="attribute__card__white">
