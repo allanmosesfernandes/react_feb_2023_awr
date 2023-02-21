@@ -17,14 +17,29 @@ const BlogArticle = () => {
       });
   }, [slug]);
 
+    let formattedDate = null;
+    if (post) {
+        const dateString = post.date.split("T")[0];
+        const date = new Date(dateString);
+        const options = { month: 'short', day: 'numeric', year: 'numeric' };
+        formattedDate = date.toLocaleString('en-US', options);
+    }
+
 
   return (
     <div className='wrapper blog__article'>
     {post ? (
-        <>
-          <h2>{post.title.rendered}</h2>
-          <div dangerouslySetInnerHTML={{ __html: post.content.rendered }} />
-        </>
+        <div className="blog__article__wrapper">
+        <div className="blog__article__intro">
+            <h2 className="blog__art">{post.title.rendered}</h2>
+            <div className="blog__preview__date"><span><hr /></span>{formattedDate}</div>
+        </div>
+          
+          <div className="blog__article__content" dangerouslySetInnerHTML={{ __html: post.content.rendered }} />
+
+        </div>
+
+        
       ) : (
         <p>Loading...</p>
       )}
