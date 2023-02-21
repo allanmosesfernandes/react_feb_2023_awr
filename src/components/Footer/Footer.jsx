@@ -23,7 +23,6 @@ let currentYear = new Date().getFullYear();
             <div className="arrow_div">
                 <img src={Top} alt="Top Arrow" />
             </div>
-            
         </div>
 
         <p className="footer__hello">

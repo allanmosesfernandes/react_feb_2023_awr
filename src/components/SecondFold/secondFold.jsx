@@ -1,5 +1,6 @@
 import React from 'react';
 import "./second-fold.scss";
+import Arrow from "../../assets/images/arrow.svg";
 
 const SecondFold = () => {
   return (
@@ -18,7 +19,9 @@ const SecondFold = () => {
                         </div>
                     </div>
                 </div>
-                <h4 className="attribute__post"><span className='gothic'>Fashion</span> Merchandiser</h4>
+                <h4 className="attribute__post">Fashion Merchandiser</h4>
+                <img src={Arrow} alt="Arrow" className='what_arrow'/>
+
                 <button className="button-50">Learn More</button>
 
             </div>
@@ -34,7 +37,9 @@ const SecondFold = () => {
                         </div>
                     </div>
                 </div>
-                <h4 className='attribute__post'><span className='gothic'>Trend </span>Forecaster</h4>
+                <h4 className='attribute__post'>Trend Forecaster</h4>
+                                <img src={Arrow} alt="Arrow" className='what_arrow'/>
+
                 <button className="button-50">Learn More</button>
                 {/* <FontAwesomeIcon icon="fa-solid fa-arrow-right-long" /> */}
             </div>

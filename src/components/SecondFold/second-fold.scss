@@ -3,9 +3,13 @@
     src: url("../../assets/fonts/grotesk.ttf");
 }
 
+
+.what_arrow {
+    width: 100px;
+    margin: 2rem 0 4rem 0;
+}
 .second__fold {
     padding: var(--body-padding);
-    height: 80vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -13,7 +17,7 @@
     h4 {
     font-size: var(--large-text-size);
     font-family: sf-pro, Arial, sans-serif;
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
     }
 }
 
@@ -38,9 +42,7 @@
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
     width: 100%;
-    margin: 2rem 0;
     height: 100%;
-
 }
 
 .attribute__card__details {
@@ -81,6 +83,12 @@
     .button-50 {
         background-color: #d8d8d8;
         color: #000;
+
+        &:hover {
+        background-color: #000;
+        color: #d8d8d8;
+        border: 1px solid white;
+        }
     }
 }
 
@@ -160,7 +168,9 @@
         grid-template-columns: 1fr;
         gap: 2rem;
     }
-
+    .what_arrow {
+        width: 50px;
+    }
 }
 
 .gothic {
@@ -172,6 +182,7 @@
 /* CSS */
 .button-50 {
     appearance: button;
+    transition: all 0.2s ease-in;
     background-color: #000;
     background-image: none;
     border: 1px solid #000;
@@ -200,12 +211,16 @@
     text-transform: uppercase;
     line-height: 1.2;
     font-weight: bold;
+    
     &:focus {
         text-decoration: none;
     }
 
     &:hover {
         text-decoration: none;
+        background-color: #d8d8d8;
+        color: #000;
+        border: 1px solid #000;
     }
 
     &:active {
@@ -224,5 +239,11 @@
 @media (min-width: 768px) {
     .button-50 {
         padding: 12px 50px;
+    }
+}
+@media (max-width: 768px) {
+    .button-50 {
+        width: 50%;
+        padding: 1rem;
     }
 }
