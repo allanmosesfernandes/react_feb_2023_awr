@@ -1,26 +1,30 @@
-import React from 'react';
+import {React, useState, useRef, useEffect} from 'react';
 import "./firstfold.scss";
 import ankan from "../../assets/images/ankan_bg.jpg";
 import thread from "../../assets/images/thread.svg";
 import SecondFold from '../SecondFold/secondFold';
 import Brands from '../Brands/Brands';
 import Writing from '../Writing/writing';
-import Footer from '../Footer/Footer';
+import { useInView } from "react-intersection-observer";
+
+
+
 const FirstFold = () => {
+
+// Use object destructuring, so you don't need to remember the exact order
+
+  // const { ref: firstFoldRef, inView: isElementVisible , entry} = useInView();
+  const { ref: rocketRef, inView: isElementVisible , entry} = useInView();
+
+  const isIntersecting = entry ? entry.isIntersecting : false;
+  console.log(isIntersecting);
+
+
   return (
     <>
-      <div className='wrapper first-fold'>
+      <div className='wrapper first-fold' id="first_fold">
       <div className="text__left">
-        {/* <div className="picture__details">
-          <div className="picture__details_left">
-            <strong>COLLABORATION WITH:</strong>
-            <span>GUCCI HANDBAGS</span>
-          </div>
-          <div className="picture__details_right">
-            <strong>INSIDE THE HOUSE:</strong>
-            <span>FASHION SHOW</span>
-          </div>
-        </div>  */}
+
        <div className="future-of-fashion">
         <p>the future of <br />fashion</p>
       </div>
@@ -30,16 +34,18 @@ const FirstFold = () => {
       </div> 
       </div>
       <div className="image__center">
-        <img src={ankan} alt="ankan" className='ankan_img'/>
+         {/* <img src={ankan} alt="ankan" className='ankan_img'/>
         <span>
           <img src={thread} alt="thread" className='thread'/>
-        </span> 
+        </span>   */}
       </div>
       <div className="photo__by">
         {/* <strong>PHOTO BY:</strong>
         <span>PK Photography</span> */}
       </div>
-
+      <p ref={rocketRef}>
+        <span className={isIntersecting ? 'rocket animateRocket' : 'rocket '}> 🚀</span>
+      </p>
     </div> 
     <SecondFold /> 
     <Brands /> 

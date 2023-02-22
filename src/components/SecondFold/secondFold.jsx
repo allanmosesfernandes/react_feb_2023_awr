@@ -1,20 +1,10 @@
-import React from 'react';
+import {React, useState} from 'react';
 import "./second-fold.scss";
 import Arrow from "../../assets/images/arrow.svg";
 import { Link } from 'react-router-dom';
 
 
 const SecondFold = () => {
-    
-
-    
-    let options = {
-        root: null,
-        threshold: 0.25,
-        rootMargin: "",
-    }
-
-
 
   return (
     <div className='wrapper second__fold' id='second__container'>
