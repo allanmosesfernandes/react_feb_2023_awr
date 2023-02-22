@@ -5,19 +5,10 @@ import thread from "../../assets/images/thread.svg";
 import SecondFold from '../SecondFold/secondFold';
 import Brands from '../Brands/Brands';
 import Writing from '../Writing/writing';
-import { useInView } from "react-intersection-observer";
 
 
 
 const FirstFold = () => {
-
-// Use object destructuring, so you don't need to remember the exact order
-
-  // const { ref: firstFoldRef, inView: isElementVisible , entry} = useInView();
-  const { ref: rocketRef, inView: isElementVisible , entry} = useInView();
-
-  const isIntersecting = entry ? entry.isIntersecting : false;
-  console.log(isIntersecting);
 
 
   return (
@@ -43,9 +34,9 @@ const FirstFold = () => {
         {/* <strong>PHOTO BY:</strong>
         <span>PK Photography</span> */}
       </div>
-      <p ref={rocketRef}>
+      {/* <p ref={rocketRef}>
         <span className={isIntersecting ? 'rocket animateRocket' : 'rocket '}> 🚀</span>
-      </p>
+      </p> */}
     </div> 
     <SecondFold /> 
     <Brands /> 
