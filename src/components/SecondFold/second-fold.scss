@@ -8,6 +8,7 @@
     width: 100px;
     margin: 2rem 0 4rem 0;
 }
+
 .second__fold {
     padding: var(--body-padding);
     display: flex;
@@ -15,9 +16,9 @@
     justify-content: center;
 
     h4 {
-    font-size: var(--large-text-size);
+        font-size: var(--large-text-size);
 
-    margin-bottom: 2rem;
+        margin-bottom: 2rem;
     }
 }
 
@@ -70,7 +71,6 @@
     @extend .attribute__card__white;
     background-color: #000;
     color: #fff;
-
     .attribute__card__details {
         border-top: 3px solid #d8d8d8;
         padding: 2rem 0;
@@ -81,60 +81,19 @@
     }
 
     .button-50 {
-        background-color: #d8d8d8;
-        color: #000;
+    color: #fff;
+    border: 1px solid white;
+
 
         &:hover {
-        background-color: #000;
-        color: #d8d8d8;
-        border: 1px solid white;
+            background-color: #000;
+            color: #d8d8d8;
+            border: 1px solid white;
         }
     }
 }
 
-/* CSS */
-.button-74 {
-    background-color: #fff;
-    border: 2px solid #000000;
-    border-radius: 30px;
-    color: #422800;
-    cursor: pointer;
-    display: inline-block;
-    font-weight: 600;
-    font-size: 16px;
-    padding: 0 18px;
-    line-height: 2;
-    text-decoration: none;
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-    width: max-content;
-    margin: 3rem 0;
-    text-align: left;
 
-    &::after {
-        content: "➝";
-
-    }
-}
-
-.button-74:hover {
-    background-color: #fff;
-}
-
-.button-74:active {
-    box-shadow: #422800 2px 2px 0 0;
-    transform: translate(2px, 2px);
-}
-
-.glowing-dot {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background-color: rgb(102, 255, 0);
-    box-shadow: 0 0 10px #fff;
-    animation: pulse 1s infinite;
-}
 
 @keyframes pulse {
     0% {
@@ -168,6 +127,7 @@
         grid-template-columns: 1fr;
         gap: 2rem;
     }
+
     .what_arrow {
         width: 50px;
     }
@@ -183,13 +143,13 @@
 .button-50 {
     appearance: button;
     transition: all 0.2s ease-in;
-    background-color: #000;
+    background-color: transparent;
     background-image: none;
     border: 1px solid #000;
     border-radius: 4px;
     box-shadow: #fff 4px 4px 0 0, #000 4px 4px 0 1px;
     box-sizing: border-box;
-    color: #fff;
+    color: #000;
     cursor: pointer;
     display: inline-block;
     font-family: ITCAvantGardeStd-Bk, Arial, sans-serif;
@@ -211,7 +171,7 @@
     text-transform: uppercase;
     line-height: 1.2;
     font-weight: bold;
-    
+
     &:focus {
         text-decoration: none;
     }
@@ -241,6 +201,7 @@
         padding: 12px 50px;
     }
 }
+
 @media (max-width: 768px) {
     .button-50 {
         width: 50%;

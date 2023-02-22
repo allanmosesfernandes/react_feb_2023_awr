@@ -16,7 +16,6 @@
 
 
 nav {
-  --background: white;
     display: flex;
     font-size: var(--large-text-size);
     justify-content: space-between;
@@ -26,12 +25,14 @@ nav {
     position: sticky;
     top: 0;
     height: 10vh;
-    background-color: var(--background);
     z-index: 3;
-    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in;
 }
 
-
+.header-bg {
+  background-color: #ffffff;
+  box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
+}
 
 .logo {
   font-family: gothic;
