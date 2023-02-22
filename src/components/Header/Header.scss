@@ -16,6 +16,7 @@
 
 
 nav {
+  --background: transparent;
     display: flex;
     font-size: var(--large-text-size);
     justify-content: space-between;
@@ -25,11 +26,14 @@ nav {
     position: sticky;
     top: 0;
     height: 10vh;
-    background-color: var(--body-color);
-    z-index: 1;
+    background-color: var(--background);
+    z-index: 3;
+    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
 }
 
-
+.scrolled {
+  background-color: white;
+}
 .logo {
   font-family: gothic;
   line-height: 1.5;

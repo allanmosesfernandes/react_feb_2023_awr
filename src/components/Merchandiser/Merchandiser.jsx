@@ -1,9 +1,10 @@
 import React from 'react'
 import "./merchandiser.scss"
 import Star from "../../assets/images/BlackStar.svg";
-
+import Experience from '../Experience/Experience';
 const Merchandiser = () => {
 return (
+<>
 <div className='wrapper merchandiser__container'>
   <h2>Fashion Merchandiser</h2>
   <div className="merchandiser__content">
@@ -21,12 +22,12 @@ return (
         developing creative and disruptive ideas that impact businesses positively.
       </p>
       <p>
-        <strong>High-octane go-getter:</strong>
+        <strong>High-octane go-getter: </strong>
 
         I thrive in environments that involve high levels of autonomy, innovation, and creativity
       </p>
       <p>
-        <strong>Continuously evolving:</strong>
+        <strong>Continuously evolving: </strong>
 
         My sole objective lies in aiming to optimize every process and product and plan to make lives easier and simpler
         as we go along.
@@ -44,6 +45,9 @@ return (
 
   </div>
 </div>
+<Experience />
+</>
+
 )
 }
 

@@ -5,8 +5,19 @@ import { Link } from 'react-router-dom';
 
 
 const SecondFold = () => {
+    
+
+    
+    let options = {
+        root: null,
+        threshold: 0.25,
+        rootMargin: "",
+    }
+
+
+
   return (
-    <div className='wrapper second__fold'>
+    <div className='wrapper second__fold' id='second__container'>
         <h4>What I do</h4>
         <div className="attribute__card__container">
             <div className="attribute__card__black">
