@@ -1,6 +1,7 @@
 .about_me {
     padding: var(--body-padding);
     font-family: "sf-pro";
+    flex-direction: column;
 }
 
 
@@ -60,7 +61,7 @@
 }
 
 .about__me__txt {
-    width: max(50%, 500px);
+    width: max(40%, 500px);
 
     p {
         font-size: var(--medium-text-size);
