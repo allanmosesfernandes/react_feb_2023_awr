@@ -84,11 +84,13 @@
     align-items: center;
     gap: 2rem;
     height: 220px;
+    position: relative;
     background-color: #f9f9eb;
     border-radius: 100px;
     transition: all 0.5s ease-in-out;
     cursor: pointer;
     align-items: center;
+
     .principle__emoji {
         font-size: 5rem;
         padding: 2rem;
@@ -96,35 +98,42 @@
 
     .principle__copy {
         font-size: var(--medium-text-size);
+        padding: 1rem;
     }
 }
+
 .principle__copy {
-  /* other styles */
-  overflow: hidden;
-  transition: all 0.5s ease;
+    /* other styles */
+    overflow: hidden;
+    transition: all 0.9s ease;
 }
 
 .shorty {
     font-size: var(--large-text-size);
     opacity: 1;
-    transition: all 0.3s ease-in;
+    transition: all 0.9s ease;
+    transform: translateY(0);
 }
 
 .not_shorty {
-    transform: translateY(-70px);
     opacity: 0;
+    position: absolute;
+    transform: translateY(-10%);
     font-size: var(--large-text-size);
 
 }
 
 .hover__effect {
-  transform: translateY(134px);
-  opacity: 0;
+    transform: translateY(90%);
+    opacity: 0;
+    position: absolute;
 }
+
 .show-long-text {
-transition: all 0.5s ease;
-    transform: translateY(-23px);
-opacity: 1;
+    transition: all 0.9s ease;
+    transform: translateY(0);
+    opacity: 1;
+
 }
 
 

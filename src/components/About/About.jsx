@@ -91,7 +91,7 @@ return (
                     onMouseEnter={mouseHover}
                     onMouseLeave={mouseHoverOver}>
                     <div className='principle__emoji' data-custom="empathy">❤️</div>
-                    <div data-custom="empathy">
+                    <div data-custom="empathy" className='principle__copy'>
 
                     <p 
                     data-custom="empathy" 
