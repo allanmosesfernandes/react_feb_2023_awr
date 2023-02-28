@@ -70,7 +70,20 @@
     }
 }
 
+.principles__block__container {
+    margin-top: 3rem;
+    width: 80%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
 
+.principle__capsule {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
 @media only screen and (max-width: 767px) {
     //code goes here
 

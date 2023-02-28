@@ -1,7 +1,14 @@
-import React from 'react'
+import React, { useState } from 'react'
 import "./about.scss";
 
 const About = () => {
+
+const [text ,setText] = useState({
+    "empathy": "I am a strong believer in building collaborative relationships and working towards a common goal through developing creative and disruptive ideas that impact businesses positively",
+    "octane": "I thrive in environments that involve high levels of autonomy, innovation, and creativity. ",
+    "evolving": "My sole objective lies in aiming to optimize every process and product and plan to make lives easier and simpler as we go along.",
+
+})
 return (
 <div className='wrapper about_me'>
     <div className="about__me__second__fold">
@@ -13,13 +20,11 @@ return (
 
             <div className="about__me__txt">
                 <p>
-                    An LA-based award-winning design director and UI/UX design expert with 10 years of experience in
-                    design and management.
+                    A strategist by heart, I specialize in buying & merchandising with 5+ years of work experience with premium international brands and currently widening my portfolio in the luxury sphere as a buyer.
                 </p>
-                <p>
-                    I am a mom to a beautiful 2 y.o. daughter who already loves attending business meetings with me.
-                    Also, a big part of my life is Netrix - a design agency which I run together with my husband.
-                </p>
+                 <p>
+                    Zealous about menswear & womenswear RTW, menswear & womenswear athleisure, menswear & womenswear sport, leather home & accessories
+                </p> 
             </div>
 
         </div>
@@ -33,22 +38,39 @@ return (
 
             <div className="about__me__txt">
                 <p>
-                    For me, design is about problem solving, communicating an objective, and helping people.
-
+                    Recipe for a good soup in my dictionary- Researching the culturally driven consumer behaviour that’s perpetually evolving & assessing its impact on businesses globally & locally through acute analysis of relevant KPIs.
                 </p>
-                <p>
 
-                    I believe that everything you can imagine is possible when you have clearly defined goals, strong
-                    design, strategy and assemble a talented team.
-                </p>
             </div>
 
         </div>
         <div className="principles__block__container">
-            <div className="principle__capsule"></div>
-            <div className="principle__capsule"></div>
-            <div className="principle__capsule"></div>
-            <div className="principle__capsule"></div>
+
+            <div className="principle__capsule">
+                <div className='principle__emoji'>💖</div>
+                <div className="principle__copy">
+                    <p>{text.empathy}</p>
+                </div>
+            </div>
+            <div className="principle__capsule">
+                <div className='principle__emoji'>💖</div>
+                <div className="principle__copy">
+                    <p>{text.empathy}</p>
+                </div>
+            </div>
+            <div className="principle__capsule">
+                <div className='principle__emoji'>💖</div>
+                <div className="principle__copy">
+                    <p>{text.empathy}</p>
+                </div>
+            </div>
+            <div className="principle__capsule">
+                <div className='principle__emoji'>💖</div>
+                <div className="principle__copy">
+                    <p>{text.empathy}</p>
+                </div>
+            </div>
+
         </div>
     </div>
 
