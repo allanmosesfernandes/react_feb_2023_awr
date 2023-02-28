@@ -4,9 +4,24 @@ import "./about.scss";
 const About = () => {
 
 const [text ,setText] = useState({
-    "empathy": "I am a strong believer in building collaborative relationships and working towards a common goal through developing creative and disruptive ideas that impact businesses positively",
-    "octane": "I thrive in environments that involve high levels of autonomy, innovation, and creativity. ",
-    "evolving": "My sole objective lies in aiming to optimize every process and product and plan to make lives easier and simpler as we go along.",
+
+    empathy: {
+        short: "Driven by empathy",
+        long: "I am a strong believer in building collaborative relationships and working towards a common goal through developing creative and disruptive ideas that impact businesses positively.",
+        showLongText: false
+    },
+    octane: {
+        short: "High-octane go-getter",
+        long: "I thrive in environments that involve high levels of autonomy, innovation, and creativity.",
+        showLongText: false
+
+    },
+
+    evolve: {
+        short: "Continuously evolving",
+        long: "My sole objective lies in aiming to optimize every process and product and plan to make lives easier and simpler as we go along.",
+        showLongText: false
+    },
 
 })
 return (
@@ -46,30 +61,122 @@ return (
         </div>
         <div className="principles__block__container">
 
-            <div className="principle__capsule">
-                <div className='principle__emoji'>💖</div>
-                <div className="principle__copy">
-                    <p>{text.empathy}</p>
+                <div
+                    className="principle__capsule"
+                    data-custom="empathy"
+                    onMouseEnter={(e) => {
+                        let atts = e.target.getAttribute('data-custom');
+                        setText({
+                            ...text,
+                            [atts]: {
+                                ...text[atts],
+                                showLongText: true
+                            }
+
+                        })
+                    }}
+                    onMouseLeave={(e) => {
+                        let atts = e.target.getAttribute('data-custom');
+                        setText({
+                            ...text,
+                            [atts]: {
+                                ...text[atts],
+                                showLongText: false
+                            }
+                        });
+                    }}>
+                    <div className='principle__emoji' data-custom="empathy">❤️</div>
+                    <div data-custom="empathy">
+
+                    <p 
+                    data-custom="empathy" 
+                    className={`${text.empathy.showLongText ? 'not_shorty' : 'shorty'}`}>
+                        {text.empathy.short}
+                    </p>
+                    <p 
+                    data-custom="empathy" 
+                    className={`principle__copy ${text.empathy.showLongText ? 'show-long-text' : 'hover__effect'}`}>{text.empathy.long}
+                    </p>
                 </div>
-            </div>
-            <div className="principle__capsule">
-                <div className='principle__emoji'>💖</div>
-                <div className="principle__copy">
-                    <p>{text.empathy}</p>
                 </div>
-            </div>
-            <div className="principle__capsule">
-                <div className='principle__emoji'>💖</div>
-                <div className="principle__copy">
-                    <p>{text.empathy}</p>
+                <div
+                    className="principle__capsule"
+                    data-custom="octane"
+                    onMouseEnter={(e) => {
+                        let atts = e.target.getAttribute('data-custom');
+                        setText({
+                            ...text,
+                            [atts]: {
+                                ...text[atts],
+                                showLongText: true
+                            }
+
+                        })
+                    }}
+                    onMouseLeave={(e) => {
+                        let atts = e.target.getAttribute('data-custom');
+                        setText({
+                            ...text,
+                            [atts]: {
+                                ...text[atts],
+                                showLongText: false
+                            }
+                        });
+                    }}>
+                    <div className='principle__emoji' data-custom="empathy">⚡</div>
+                    <div data-custom="octane">
+
+                    <p 
+                    data-custom="octane" 
+                    className={`${text.octane.showLongText ? 'not_shorty' : 'shorty'}`}>
+                        {text.octane.short}
+                    </p>
+                    <p 
+                    data-custom="octane" 
+                    className={`principle__copy ${text.octane.showLongText ? 'show-long-text' : 'hover__effect'}`}>{text.octane.long}
+                    </p>
                 </div>
-            </div>
-            <div className="principle__capsule">
-                <div className='principle__emoji'>💖</div>
-                <div className="principle__copy">
-                    <p>{text.empathy}</p>
                 </div>
-            </div>
+                <div
+                    className="principle__capsule"
+                    data-custom="evolve"
+                    onMouseEnter={(e) => {
+                        let atts = e.target.getAttribute('data-custom');
+                        setText({
+                            ...text,
+                            [atts]: {
+                                ...text[atts],
+                                showLongText: true
+                            }
+
+                        })
+                    }}
+                    onMouseLeave={(e) => {
+                        let atts = e.target.getAttribute('data-custom');
+                        setText({
+                            ...text,
+                            [atts]: {
+                                ...text[atts],
+                                showLongText: false
+                            }
+                        });
+                    }}>
+                    <div className='principle__emoji' data-custom="evolve">🌱</div>
+                    <div data-custom="evolve">
+
+                    <p 
+                    data-custom="evolve" 
+                    className={`${text.evolve.showLongText ? 'not_shorty' : 'shorty'}`}>
+                        {text.evolve.short}
+                    </p>
+                    <p 
+                    data-custom="evolve" 
+                    className={`principle__copy ${text.evolve.showLongText ? 'show-long-text' : 'hover__effect'}`}>{text.evolve.long}
+                    </p>
+                </div>
+                </div>
+
+
 
         </div>
     </div>

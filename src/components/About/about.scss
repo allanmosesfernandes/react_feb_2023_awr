@@ -72,18 +72,62 @@
 
 .principles__block__container {
     margin-top: 3rem;
-    width: 80%;
-    margin: auto;
+    width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 2rem;
+    gap: 4rem;
+    grid-row: 200px;
 }
 
 .principle__capsule {
     display: flex;
     align-items: center;
     gap: 2rem;
+    background-color: #f9f9eb;
+    border-radius: 100px;
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+    align-items: center;
+    .principle__emoji {
+        font-size: 5rem;
+        padding: 2rem;
+    }
+
+    .principle__copy {
+        font-size: var(--medium-text-size);
+    }
 }
+.principle__copy {
+  /* other styles */
+  overflow: hidden;
+  transition: all 0.5s ease;
+}
+
+.shorty {
+    transform: translateY(70px);
+    font-size: var(--large-text-size);
+    opacity: 1;
+    transition: all 0.3s ease-in;
+}
+
+.not_shorty {
+    transform: translateY(-70px);
+    opacity: 0;
+    font-size: var(--large-text-size);
+
+}
+
+.hover__effect {
+  transform: translateY(134px);
+  opacity: 0;
+}
+.show-long-text {
+transition: all 0.5s ease;
+    transform: translateY(-23px);
+opacity: 1;
+}
+
+
 @media only screen and (max-width: 767px) {
     //code goes here
 
@@ -105,8 +149,8 @@
 
         p {
             font-size: var(--medium-text-size);
-            margin: 0 0 2rem 0;
-            
+            margin: 0 0 0rem 0;
+
         }
     }
 
