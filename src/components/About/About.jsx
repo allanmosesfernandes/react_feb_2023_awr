@@ -24,6 +24,30 @@ const [text ,setText] = useState({
     },
 
 })
+
+const mouseHover = (e) => {
+    let atts = e.target.getAttribute('data-custom');
+    setText({
+        ...text,
+        [atts]: {
+            ...text[atts],
+            showLongText: true
+        }
+
+    })
+}
+
+const mouseHoverOver = (e) => {
+    let atts = e.target.getAttribute('data-custom');
+    setText({
+        ...text,
+        [atts]: {
+            ...text[atts],
+            showLongText: false
+        }
+
+    })
+}
 return (
 <div className='wrapper about_me'>
     <div className="about__me__second__fold">
@@ -64,27 +88,8 @@ return (
                 <div
                     className="principle__capsule"
                     data-custom="empathy"
-                    onMouseEnter={(e) => {
-                        let atts = e.target.getAttribute('data-custom');
-                        setText({
-                            ...text,
-                            [atts]: {
-                                ...text[atts],
-                                showLongText: true
-                            }
-
-                        })
-                    }}
-                    onMouseLeave={(e) => {
-                        let atts = e.target.getAttribute('data-custom');
-                        setText({
-                            ...text,
-                            [atts]: {
-                                ...text[atts],
-                                showLongText: false
-                            }
-                        });
-                    }}>
+                    onMouseEnter={mouseHover}
+                    onMouseLeave={mouseHoverOver}>
                     <div className='principle__emoji' data-custom="empathy">❤️</div>
                     <div data-custom="empathy">
 
@@ -102,28 +107,9 @@ return (
                 <div
                     className="principle__capsule"
                     data-custom="octane"
-                    onMouseEnter={(e) => {
-                        let atts = e.target.getAttribute('data-custom');
-                        setText({
-                            ...text,
-                            [atts]: {
-                                ...text[atts],
-                                showLongText: true
-                            }
-
-                        })
-                    }}
-                    onMouseLeave={(e) => {
-                        let atts = e.target.getAttribute('data-custom');
-                        setText({
-                            ...text,
-                            [atts]: {
-                                ...text[atts],
-                                showLongText: false
-                            }
-                        });
-                    }}>
-                    <div className='principle__emoji' data-custom="empathy">⚡</div>
+                    onMouseEnter={mouseHover}
+                    onMouseLeave={mouseHoverOver}>
+                    <div className='principle__emoji' data-custom="octane">⚡</div>
                     <div data-custom="octane">
 
                     <p 
@@ -140,27 +126,8 @@ return (
                 <div
                     className="principle__capsule"
                     data-custom="evolve"
-                    onMouseEnter={(e) => {
-                        let atts = e.target.getAttribute('data-custom');
-                        setText({
-                            ...text,
-                            [atts]: {
-                                ...text[atts],
-                                showLongText: true
-                            }
-
-                        })
-                    }}
-                    onMouseLeave={(e) => {
-                        let atts = e.target.getAttribute('data-custom');
-                        setText({
-                            ...text,
-                            [atts]: {
-                                ...text[atts],
-                                showLongText: false
-                            }
-                        });
-                    }}>
+                    onMouseEnter={mouseHover}
+                    onMouseLeave={mouseHoverOver}>
                     <div className='principle__emoji' data-custom="evolve">🌱</div>
                     <div data-custom="evolve">
 

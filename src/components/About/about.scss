@@ -83,6 +83,7 @@
     display: flex;
     align-items: center;
     gap: 2rem;
+    height: 220px;
     background-color: #f9f9eb;
     border-radius: 100px;
     transition: all 0.5s ease-in-out;
@@ -104,7 +105,6 @@
 }
 
 .shorty {
-    transform: translateY(70px);
     font-size: var(--large-text-size);
     opacity: 1;
     transition: all 0.3s ease-in;
