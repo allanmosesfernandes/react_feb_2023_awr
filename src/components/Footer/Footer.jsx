@@ -32,7 +32,7 @@ let currentYear = new Date().getFullYear();
         <div className="footer__links">
             <div className="footer__links__hyperlinks">
                 <Link to="/" className='hyperlink'>Home</Link>
-                <Link className='hyperlink'>About</Link>
+                <Link to="about" className='hyperlink'>About</Link>
                 <Link className='hyperlink'>Blog</Link>
             </div>
             <div className="footer__links__social">

@@ -33,7 +33,7 @@ window.addEventListener("scroll", changeColor);
         </div>
         <div className="header-right">
           <button className="button-4">BLOG</button>
-          <Link className='hide_on_mobile'>Contact</Link>
+          <Link className='hide_on_mobile' to="/about">about</Link>
         </div>
     </nav>
     
