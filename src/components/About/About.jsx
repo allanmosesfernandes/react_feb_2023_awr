@@ -142,6 +142,25 @@ return (
                     </p>
                 </div>
                 </div>
+                <div
+                    className="principle__capsule"
+                    data-custom="evolve"
+                    onMouseEnter={mouseHover}
+                    onMouseLeave={mouseHoverOver}>
+                    <div className='principle__emoji' data-custom="evolve">🌱</div>
+                    <div data-custom="evolve">
+
+                    <p 
+                    data-custom="evolve" 
+                    className={`${text.evolve.showLongText ? 'not_shorty' : 'shorty'}`}>
+                        {text.evolve.short}
+                    </p>
+                    <p 
+                    data-custom="evolve" 
+                    className={`principle__copy ${text.evolve.showLongText ? 'show-long-text' : 'hover__effect'}`}>{text.evolve.long}
+                    </p>
+                </div>
+                </div>
 
 
 
