@@ -178,14 +178,13 @@
     }
 
     .not_shorty {
-
         font-size: 2rem !important;
-
     }
 
     .principle__capsule {
 
         height: auto;
+        min-height: auto;
 
         .principle__emoji {
             font-size: 3rem;
