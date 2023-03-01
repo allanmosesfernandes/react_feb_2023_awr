@@ -44,7 +44,7 @@ const Brands = () => {
             </div>
             <div className="brand__box calvin_klien">
                <img src={Calvin} alt="Calvin Klien" title='Calvin Klien Jeans'/>
-            </div>
+            </div>a
 
             <div className="brand__box">
                  <img src={Gas} alt="Gas Jeans"  title='Gas Jeans' />

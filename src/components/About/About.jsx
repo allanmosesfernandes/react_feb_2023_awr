@@ -111,7 +111,7 @@ return (
                     <p 
                     data-custom="empathy" 
                     className={`${text.empathy.showLongText ? 'not_shorty' : 'shorty'}`}>
-                        {text.empathy.short}
+                       Driven by <span>empathy</span>
                     </p>
                     <p 
                     data-custom="empathy" 
@@ -130,7 +130,7 @@ return (
                     <p 
                     data-custom="octane" 
                     className={`${text.octane.showLongText ? 'not_shorty' : 'shorty'}`}>
-                        {text.octane.short}
+                        High-octane <span>go-getter</span>
                     </p>
                     <p 
                     data-custom="octane" 
@@ -149,7 +149,7 @@ return (
                     <p 
                     data-custom="evolve" 
                     className={`${text.evolve.showLongText ? 'not_shorty' : 'shorty'}`}>
-                        {text.evolve.short}
+                      Continuously <span>evolving</span>
                     </p>
                     <p 
                     data-custom="evolve" 
