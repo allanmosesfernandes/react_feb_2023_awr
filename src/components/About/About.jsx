@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import "./about.scss";
-
+import WorkTimeLine from '../Work/WorkTimeLine';
 const About = () => {
 
 const [text ,setText] = useState({
@@ -81,6 +81,8 @@ return (
 
         </div>
     </div>
+        <WorkTimeLine />
+
     <div className="about__me__second__fold">
         <h2>Key <span>Principles</span>.</h2>
         <div className="second_fold_block">
@@ -181,6 +183,7 @@ return (
     </div>
 
 </div>
+
 )
 }
 

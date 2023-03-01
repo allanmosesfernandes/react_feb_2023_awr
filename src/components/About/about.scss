@@ -71,11 +71,11 @@
 }
 
 .principles__block__container {
-    margin-top: 3rem;
+    margin: 5rem 0 15rem 0;
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 10rem;
+    gap: 5rem;
     grid-row: 200px;
 }
 
@@ -83,11 +83,11 @@
     justify-content: center;
     display: flex;
     align-items: center;
-    height: 220px;
+    min-height: 200px;
     position: relative;
     background-color: #f9f9eb;
     border-radius: 100px;
-    transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-out;
     cursor: pointer;
     align-items: center;
 
