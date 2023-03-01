@@ -5,7 +5,7 @@ import thread from "../../assets/images/thread.svg";
 import SecondFold from '../SecondFold/secondFold';
 import Brands from '../Brands/Brands';
 import Writing from '../Writing/writing';
-
+import WeeklyInspiration from '../WeeklyInspiration/WeeklyInspiration';
 
 
 const FirstFold = () => {
@@ -38,6 +38,7 @@ const FirstFold = () => {
     </div> 
     <SecondFold /> 
     <Brands /> 
+    <WeeklyInspiration />
     <Writing />
     </>
 
