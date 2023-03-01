@@ -23,19 +23,32 @@ const [text ,setText] = useState({
         showLongText: false
     },
 
+    passionate: {
+        short: "Continuously pashunate",
+        long: "My sole objective lies in aiming to optimize every process and product and plan to make lives easier and simpler as we go along.",
+        showLongText: false
+    },
+
 })
 
 const mouseHover = (e) => {
-    let atts = e.target.getAttribute('data-custom');
-    setText({
-        ...text,
-        [atts]: {
-            ...text[atts],
-            showLongText: true
-        }
-
-    })
-}
+  let atts = e.target.getAttribute('data-custom');
+  const updatedText = {};
+  for (const key in text) {
+    if (key !== atts) {
+      updatedText[key] = {
+        ...text[key],
+        showLongText: false,
+      };
+    } else {
+      updatedText[key] = {
+        ...text[key],
+        showLongText: true,
+      };
+    }
+  }
+  setText(updatedText);
+};
 
 const mouseHoverOver = (e) => {
     let atts = e.target.getAttribute('data-custom');
@@ -144,20 +157,20 @@ return (
                 </div>
                 <div
                     className="principle__capsule"
-                    data-custom="evolve"
+                    data-custom="passionate"
                     onMouseEnter={mouseHover}
                     onMouseLeave={mouseHoverOver}>
-                    <div className='principle__emoji' data-custom="evolve">🌱</div>
-                    <div data-custom="evolve">
+                    <div className='principle__emoji' data-custom="passionate">🌻</div>
+                    <div data-custom="passionate">
 
                     <p 
-                    data-custom="evolve" 
-                    className={`${text.evolve.showLongText ? 'not_shorty' : 'shorty'}`}>
-                        {text.evolve.short}
+                    data-custom="passionate" 
+                    className={`${text.passionate.showLongText ? 'not_shorty' : 'shorty'}`}>
+                        {text.passionate.short}
                     </p>
                     <p 
-                    data-custom="evolve" 
-                    className={`principle__copy ${text.evolve.showLongText ? 'show-long-text' : 'hover__effect'}`}>{text.evolve.long}
+                    data-custom="passionate" 
+                    className={`principle__copy ${text.passionate.showLongText ? 'show-long-text' : 'hover__effect'}`}>{text.passionate.long}
                     </p>
                 </div>
                 </div>

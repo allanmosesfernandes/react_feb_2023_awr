@@ -75,14 +75,14 @@
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 4rem;
+    gap: 10rem;
     grid-row: 200px;
 }
 
 .principle__capsule {
+    justify-content: center;
     display: flex;
     align-items: center;
-    gap: 2rem;
     height: 220px;
     position: relative;
     background-color: #f9f9eb;
@@ -163,4 +163,29 @@
         }
     }
 
+    .principles__block__container {
+        gap: 2rem;
+        grid-template-columns: 1fr;
+    }
+
+    .shorty {
+        font-size: 2rem !important;
+    }
+
+    .not_shorty {
+
+        font-size: 2rem !important;
+
+    }
+
+    .principle__capsule {
+
+        height: auto;
+
+        .principle__emoji {
+            font-size: 3rem;
+            padding: 2rem;
+        }
+
+    }
 }
