@@ -11,25 +11,24 @@ const WeeklyInspiration = () => {
       .catch(error => console.error(error));
   }, []);
   return (
-    <div className='weekly__inspiration'>
-    <div>WeeklyInspiration</div>
+    <div className='weekly__inspiration '>
+    <h2>Visual Musings</h2>
+    <p>What's been inspiring me lately</p>
 <div className="image__grid__container">
   {images.map((image, index) => {
     let imageURL = image.image_url;
     let group = index % 5; 
-
+    const excerptElement = image.excerpt.rendered;
+    const excerptText = document.createElement('div');
+    excerptText.innerHTML = excerptElement;
+    const plainExcerpt = excerptText.textContent;
     // Set CSS classes for each group
     let highlightImage = group === 0 ? "highlight" : "secondary";
-    // let columnClasses =
-    //   group === 0
-    //     ? "image__grid__images--full"
-    //     : "image__grid__images--half";
-    // let rowClasses =
-    //   group === 0 ? "image__grid__row--full" : "image__grid__row--half";
+    let smallest = group === 4 ? "smally" : "" 
 
     return (
-      <div key={index} className={`image__grid__images ${highlightImage}`}>
-        <img src={imageURL} alt={`index-${index}`} />
+      <div key={index} className={`image__grid__images ${highlightImage} ${smallest}`}>
+        <img src={imageURL} alt={`imageTitle`} title={plainExcerpt} />
       </div>
     );
   })}

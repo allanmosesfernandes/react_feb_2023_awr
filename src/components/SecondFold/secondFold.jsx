@@ -25,7 +25,7 @@ const SecondFold = () => {
                 <h4 className="attribute__post">Fashion Merchandiser</h4>
                 <img src={Arrow} alt="Arrow" className='what_arrow'/>
                 
-                <Link to="fashion-merchandiser"><button className="button-50">Learn More</button></Link>
+                <Link to="about"><button className="button-50">Learn More</button></Link>
                 
 
             </div>
@@ -42,10 +42,9 @@ const SecondFold = () => {
                     </div>
                 </div>
                 <h4 className='attribute__post'>Trend Forecaster</h4>
-                                <img src={Arrow} alt="Arrow" className='what_arrow'/>
+                <img src={Arrow} alt="Arrow" className='what_arrow'/>
 
                 <button className="button-50">Learn More</button>
-                {/* <FontAwesomeIcon icon="fa-solid fa-arrow-right-long" /> */}
             </div>
         </div>
     </div>

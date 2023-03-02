@@ -1,17 +1,29 @@
 .weekly__inspiration {
     flex-direction: column;
+    padding: var(--body-padding);
+    font-family: "sf-pro";
+
+    h2 {
+        font-size: var(--large-text-size);
+    }
+
+    p {
+        font-size: var(--medium-text-size);
+    }
+
+    background-color: #333333;
+    color: #fff;
 }
 
-// .image__grid__container {
-//     display: grid;
-//     grid-template-columns: 1fr 1fr 1fr;
-//     gap: 3rem;
-//     img {
-//         max-width: 100%;
-//         height: auto;
-//     }
-// }
-
+.smally {
+    height: 70%;
+    margin-right: auto;
+}
+.secondary.smally {
+    img {
+        object-fit: contain;
+    }
+}
 .image__grid__container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -23,9 +35,6 @@
     }
 }
 
-.image__grid__row--half {
-    grid-row-end: span 2;
-}
 
 .image__grid__images img {
     object-fit: cover;
@@ -33,10 +42,29 @@
     height: 100%;
 }
 
-.image__grid__images--full {
-    grid-column-end: span 3;
-}
 
-.image__grid__images--half {
-    grid-column-end: span 2;
+@media only screen and (max-width: 600px) {
+  //code goes here
+  .image__grid__container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    margin: 3rem 0 5rem 0;
+    .highlight {
+        grid-column: 1 / span 1;
+        grid-row: 1 / span 2;
+    }
+
+    * {
+        cursor: pointer;
+    }
+}
+.smally {
+    height: 100%;
+}
+.secondary.smally {
+    img {
+        object-fit: cover;
+    }
+}
 }
