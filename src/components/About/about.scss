@@ -4,7 +4,6 @@
     flex-direction: column;
 }
 
-
 .about__me__second__fold {
     margin-top: 10rem;
 
@@ -192,4 +191,42 @@
         }
 
     }
+}
+
+
+.quotation {
+    position: relative;
+    span {
+        color: var(--theme-color);
+        font-style: italic;
+    }
+
+    font-family: "sf-pro-light";
+    font-size: var(--extra-large-text);
+    text-align: center;
+    margin: auto;
+    letter-spacing: 0px;
+    margin: 2rem 0;
+}
+
+.quote-icon {
+    transform: rotate(180deg);
+    position: absolute;
+    left: -20px;
+}
+.human_underline {
+    display: inline-block;
+    position: relative;
+}
+
+@media only screen and (max-width: 600px) {
+  //code goes here
+  .quotation {
+    font-size: 2rem !important;
+  }
+  .quote-icon {
+   width: 15px;
+   height: 15px;
+left: -10px;
+}
 }

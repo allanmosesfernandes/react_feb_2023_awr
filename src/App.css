@@ -9,6 +9,7 @@
   --medium-text-size: 2rem;
   --small-text-size: 1.6rem;
   --body-padding: 3rem;
+  --theme-color: #ff5757;
 }
 
 @media only screen and (max-width: 600px) {

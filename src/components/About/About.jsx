@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import "./about.scss";
 import WorkTimeLine from '../Work/WorkTimeLine';
+import Quote from "../../assets/images/quotes.svg";
 const About = () => {
 
 const [text ,setText] = useState({
@@ -102,86 +103,87 @@ return (
             </div>
 
         </div>
+        <div className="quotation">
+            <p><img src={Quote} className="quote-icon"/>At the center of the <span>macrocosm</span> is a <span className='human_underline'>human truth.</span> </p>
+        </div>
         <div className="principles__block__container">
 
-                <div
-                    className="principle__capsule"
-                    data-custom="empathy"
-                    onMouseEnter={mouseHover}
-                    onMouseLeave={mouseHoverOver}>
-                    <div className='principle__emoji' data-custom="empathy">❤️</div>
-                    <div data-custom="empathy" className='principle__copy'>
+            <div
+                className="principle__capsule"
+                data-custom="empathy"
+                onMouseEnter={mouseHover}
+                onMouseLeave={mouseHoverOver}>
+                <div className='principle__emoji' data-custom="empathy">❤️</div>
+                <div data-custom="empathy" className='principle__copy'>
 
-                    <p 
-                    data-custom="empathy" 
-                    className={`${text.empathy.showLongText ? 'not_shorty' : 'shorty'}`}>
-                       Driven by <span>empathy</span>
-                    </p>
-                    <p 
-                    data-custom="empathy" 
-                    className={`principle__copy ${text.empathy.showLongText ? 'show-long-text' : 'hover__effect'}`}>{text.empathy.long}
-                    </p>
-                </div>
-                </div>
-                <div
-                    className="principle__capsule"
-                    data-custom="octane"
-                    onMouseEnter={mouseHover}
-                    onMouseLeave={mouseHoverOver}>
-                    <div className='principle__emoji' data-custom="octane">⚡</div>
-                    <div data-custom="octane">
+                <p 
+                data-custom="empathy" 
+                className={`${text.empathy.showLongText ? 'not_shorty' : 'shorty'}`}>
+                    Driven by <span>empathy</span>
+                </p>
+                <p 
+                data-custom="empathy" 
+                className={`principle__copy ${text.empathy.showLongText ? 'show-long-text' : 'hover__effect'}`}>{text.empathy.long}
+                </p>
+            </div>
+            </div>
+            <div
+                className="principle__capsule"
+                data-custom="octane"
+                onMouseEnter={mouseHover}
+                onMouseLeave={mouseHoverOver}>
+                <div className='principle__emoji' data-custom="octane">⚡</div>
+                <div data-custom="octane">
 
-                    <p 
-                    data-custom="octane" 
-                    className={`${text.octane.showLongText ? 'not_shorty' : 'shorty'}`}>
-                        High-octane <span>go-getter</span>
-                    </p>
-                    <p 
-                    data-custom="octane" 
-                    className={`principle__copy ${text.octane.showLongText ? 'show-long-text' : 'hover__effect'}`}>{text.octane.long}
-                    </p>
-                </div>
-                </div>
-                <div
-                    className="principle__capsule"
-                    data-custom="evolve"
-                    onMouseEnter={mouseHover}
-                    onMouseLeave={mouseHoverOver}>
-                    <div className='principle__emoji' data-custom="evolve">🌱</div>
-                    <div data-custom="evolve">
+                <p 
+                data-custom="octane" 
+                className={`${text.octane.showLongText ? 'not_shorty' : 'shorty'}`}>
+                    High-octane <span>go-getter</span>
+                </p>
+                <p 
+                data-custom="octane" 
+                className={`principle__copy ${text.octane.showLongText ? 'show-long-text' : 'hover__effect'}`}>{text.octane.long}
+                </p>
+            </div>
+            </div>
+            <div
+                className="principle__capsule"
+                data-custom="evolve"
+                onMouseEnter={mouseHover}
+                onMouseLeave={mouseHoverOver}>
+                <div className='principle__emoji' data-custom="evolve">🌱</div>
+                <div data-custom="evolve">
 
-                    <p 
-                    data-custom="evolve" 
-                    className={`${text.evolve.showLongText ? 'not_shorty' : 'shorty'}`}>
-                      Continuously <span>evolving</span>
-                    </p>
-                    <p 
-                    data-custom="evolve" 
-                    className={`principle__copy ${text.evolve.showLongText ? 'show-long-text' : 'hover__effect'}`}>{text.evolve.long}
-                    </p>
-                </div>
-                </div>
-                <div
-                    className="principle__capsule"
-                    data-custom="curious"
-                    onMouseEnter={mouseHover}
-                    onMouseLeave={mouseHoverOver}>
-                    <div className='principle__emoji' data-custom="curious">🤔</div>
-                    <div data-custom="curious">
+                <p 
+                data-custom="evolve" 
+                className={`${text.evolve.showLongText ? 'not_shorty' : 'shorty'}`}>
+                    Continuously <span>evolving</span>
+                </p>
+                <p 
+                data-custom="evolve" 
+                className={`principle__copy ${text.evolve.showLongText ? 'show-long-text' : 'hover__effect'}`}>{text.evolve.long}
+                </p>
+            </div>
+            </div>
+            <div
+                className="principle__capsule"
+                data-custom="curious"
+                onMouseEnter={mouseHover}
+                onMouseLeave={mouseHoverOver}>
+                <div className='principle__emoji' data-custom="curious">🤔</div>
+                <div data-custom="curious">
 
-                    <p 
-                    data-custom="curious" 
-                    className={`${text.curious.showLongText ? 'not_shorty' : 'shorty'}`}>
-                         Insatiably <span>curious</span>
-                    </p>
-                    <p 
-                    data-custom="curious" 
-                    className={`principle__copy ${text.curious.showLongText ? 'show-long-text' : 'hover__effect'}`}>{text.curious.long}
-                    </p>
-                </div>
-                </div>
-
-
+                <p 
+                data-custom="curious" 
+                className={`${text.curious.showLongText ? 'not_shorty' : 'shorty'}`}>
+                        Insatiably <span>curious</span>
+                </p>
+                <p 
+                data-custom="curious" 
+                className={`principle__copy ${text.curious.showLongText ? 'show-long-text' : 'hover__effect'}`}>{text.curious.long}
+                </p>
+            </div>
+            </div>
 
         </div>
     </div>
