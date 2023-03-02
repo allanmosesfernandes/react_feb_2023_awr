@@ -44,6 +44,13 @@
 
 
 @media only screen and (max-width: 600px) {
+    .weekly__inspiration {
+
+
+    h2 {
+       margin-top: 3rem;
+    }
+}
   //code goes here
   .image__grid__container {
     display: grid;
