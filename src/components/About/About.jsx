@@ -23,9 +23,9 @@ const [text ,setText] = useState({
         showLongText: false
     },
 
-    passionate: {
-        short: "Continuously pashunate",
-        long: "My sole objective lies in aiming to optimize every process and product and plan to make lives easier and simpler as we go along.",
+    curious: {
+        short: "Insatiably Curious",
+        long: "Incessant learning & discovering new truths are what really motivate me each day. Always asking the hows and whys behind every what is my daily MO.",
         showLongText: false
     },
 
@@ -81,7 +81,11 @@ return (
 
         </div>
     </div>
-        <WorkTimeLine />
+
+    {/*==== Work Timeline Component ====*/}    
+    <WorkTimeLine />
+
+    {/*==== Principles ====*/}    
 
     <div className="about__me__second__fold">
         <h2>Key <span>Principles</span>.</h2>
@@ -159,20 +163,20 @@ return (
                 </div>
                 <div
                     className="principle__capsule"
-                    data-custom="passionate"
+                    data-custom="curious"
                     onMouseEnter={mouseHover}
                     onMouseLeave={mouseHoverOver}>
-                    <div className='principle__emoji' data-custom="passionate">🌻</div>
-                    <div data-custom="passionate">
+                    <div className='principle__emoji' data-custom="curious">🤔</div>
+                    <div data-custom="curious">
 
                     <p 
-                    data-custom="passionate" 
-                    className={`${text.passionate.showLongText ? 'not_shorty' : 'shorty'}`}>
-                        {text.passionate.short}
+                    data-custom="curious" 
+                    className={`${text.curious.showLongText ? 'not_shorty' : 'shorty'}`}>
+                         Insatiably <span>curious</span>
                     </p>
                     <p 
-                    data-custom="passionate" 
-                    className={`principle__copy ${text.passionate.showLongText ? 'show-long-text' : 'hover__effect'}`}>{text.passionate.long}
+                    data-custom="curious" 
+                    className={`principle__copy ${text.curious.showLongText ? 'show-long-text' : 'hover__effect'}`}>{text.curious.long}
                     </p>
                 </div>
                 </div>
