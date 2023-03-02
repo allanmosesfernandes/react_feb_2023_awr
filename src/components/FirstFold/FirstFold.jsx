@@ -24,12 +24,12 @@ const FirstFold = () => {
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur sunt distinctio error repellat. Libero dolor tenetur aliquid mollitia animi, dolore quidem repellendus quisquam asperiores maxime. Nemo officiis nulla corporis dolores.
       </div> 
       </div>
-      <div className="image__center">
+      {/* <div className="image__center">
       <img src={ankan} alt="ankan" className='ankan_img'/>
         <span>
           <img src={thread} alt="thread" className='thread'/>
         </span>  
-      </div>
+      </div> */}
       <div className="photo__by">
         {/* <strong>PHOTO BY:</strong>
         <span>PK Photography</span> */}
