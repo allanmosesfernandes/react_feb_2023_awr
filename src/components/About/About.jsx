@@ -87,13 +87,15 @@ return (
         </div>
     </div>
 
-    {/*==== Work Timeline Component ====*/}    
-    <WorkTimeLine />
+
 
     {/*==== Principles ====*/}    
-
+        <div className="quotation">
+            <p><img src={Quote} className="quote-icon"/>At the center of the <span>macrocosm</span> is a <span className='human_underline'>human truth.</span> </p>
+        </div>
     <div className="about__me__second__fold">
         <h2>Key <span>Principles</span>.</h2>
+
         <div className="second_fold_block">
             <div>
                 <button className='about_me_btn'>I follow and believe in</button>
@@ -107,9 +109,7 @@ return (
             </div>
 
         </div>
-        <div className="quotation">
-            <p><img src={Quote} className="quote-icon"/>At the center of the <span>macrocosm</span> is a <span className='human_underline'>human truth.</span> </p>
-        </div>
+
         <div className="principles__block__container">
 
             <div
@@ -191,7 +191,8 @@ return (
 
         </div>
     </div>
-
+    {/*==== Work Timeline Component ====*/}    
+    <WorkTimeLine />
 </div>
 
 )
