@@ -5,10 +5,13 @@ import axios from "axios";
 
 
 const BlogArticle = () => {
+  useEffect(() => {
+  window.scrollTo(0, 0);
+}, []);
     const [post, setPost] = useState(null);
    const {slug} = useParams();
      useEffect(() => {
-    axios.get(`http://allanmoses.ninja/wp-json/wp/v2/posts?slug=${slug}&_embed`)
+    axios.get(`https://ankanchittalipi.com/wp-json/wp/v2/posts?slug=${slug}&_embed`)
       .then(response => {
         setPost(response.data[0]);
       })
