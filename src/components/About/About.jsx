@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import "./about.scss";
 import WorkTimeLine from '../Work/WorkTimeLine';
 import Quote from "../../assets/images/quotes.svg";
@@ -32,6 +32,10 @@ const [text ,setText] = useState({
 
 })
 
+useEffect(() => {
+  window.scrollTo(0, 0);
+}, []);
+
 const mouseHover = (e) => {
   let atts = e.target.getAttribute('data-custom');
   const updatedText = {};
@@ -63,7 +67,7 @@ const mouseHoverOver = (e) => {
     })
 }
 return (
-<div className='wrapper about_me'>
+<div className='wrapper about_me' id="hi">
     <div className="about__me__second__fold">
         <h2>Hi there, I'm <span>Ankan</span>.</h2>
         <div className="second_fold_block">

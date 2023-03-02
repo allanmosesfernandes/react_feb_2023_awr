@@ -29,6 +29,10 @@ footer {
     }
 }
 
+.terms {
+    font-size: 1rem;
+}
+
 .footer__links__social {
     display: flex;
     padding: 0;
@@ -38,7 +42,11 @@ footer {
         background: #ff5757;
         border-radius: 50%;
         transition: all 0.3s ease-in;
-
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80px;
+        height: 80px;
         &:hover {
             background-color: #f2f2f2;
             color: #ff5757;
@@ -99,7 +107,7 @@ footer {
     footer {
 
         .footer__hello {
-            font-size: 5rem;
+            font-size: 4rem;
             margin: 2rem 0 1rem 0;
         }
     }
@@ -109,7 +117,6 @@ footer {
         border: none;
 
         .footer__links__hyperlinks {
-            flex-direction: column;
             gap: 3rem;
             padding: 3rem;
             text-align: center;

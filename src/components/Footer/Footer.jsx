@@ -65,7 +65,7 @@ let currentYear = new Date().getFullYear();
 
         <div className="terms__conditions">
             <p className="terms">
-               ©<strong> {currentYear} All rights reserved.</strong> 
+               © {currentYear} All rights reserved.
             </p>
             <div className="created_by">
 

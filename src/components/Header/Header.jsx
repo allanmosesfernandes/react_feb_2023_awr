@@ -1,4 +1,4 @@
-import {React, useState} from 'react';
+import {React, useState, useEffect} from 'react';
 import { Link, Outlet } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
@@ -18,6 +18,10 @@ const Header = () => {
       setNavbarChange(false)
     }
   }
+  
+useEffect(() => {
+  window.scrollTo(0, 0);
+}, []);
 
 window.addEventListener("scroll", changeColor);
  
