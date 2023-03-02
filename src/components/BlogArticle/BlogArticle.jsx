@@ -9,6 +9,8 @@ const BlogArticle = () => {
   window.scrollTo(0, 0);
 }, []);
     const [post, setPost] = useState(null);
+    const [morePosts, setMorePosts] = useState(null);
+
    const {slug} = useParams();
      useEffect(() => {
     axios.get(`https://ankanchittalipi.com/wp-json/wp/v2/posts?slug=${slug}&_embed`)
@@ -18,6 +20,14 @@ const BlogArticle = () => {
       .catch(error => {
         console.error(error);
       });
+        // Fetch other posts
+  axios.get(`https://ankanchittalipi.com/wp-json/wp/v2/posts?exclude=${post ? post.id : ''}&per_page=3&_embed`)
+    .then(response => {
+      setMorePosts(response.data);
+    })
+    .catch(error => {
+      console.error(error);
+    });
   }, [slug]);
 
     let formattedDate = null;
@@ -30,6 +40,7 @@ const BlogArticle = () => {
 
 
   return (
+    <>
     <div className='wrapper blog__article'>
     {post ? (
         <div className="blog__article__wrapper">
@@ -39,14 +50,29 @@ const BlogArticle = () => {
         </div>
           
           <div className="blog__article__content" dangerouslySetInnerHTML={{ __html: post.content.rendered }} />
-
         </div>
-
-        
       ) : (
         <p>Loading...</p>
       )}
+
     </div>
+
+    <div className="blog__other__posts wrapper">
+        <h3>Read More</h3>
+        <div className="other__posts__grid">
+
+        {morePosts ? (
+          morePosts.map(item => {
+          return <div className="other__post__block">
+            <img src={item.jetpack_featured_media_url} />
+          </div>
+          })
+        ) : (<p>Loading...</p>)}
+
+        </div>
+    </div>
+    </>
+
   )
 }
 
