@@ -1,13 +1,17 @@
 import "./blog-article.scss";
-import { useParams } from 'react-router-dom'
+import { useParams, useNavigate } from 'react-router-dom'
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
 
 const BlogArticle = () => {
+
   useEffect(() => {
   window.scrollTo(0, 0);
 }, []);
+
+  const navigate = useNavigate();
+
     const [post, setPost] = useState(null);
     const [morePosts, setMorePosts] = useState(null);
 
@@ -58,13 +62,25 @@ const BlogArticle = () => {
     </div>
 
     <div className="blog__other__posts wrapper">
-        <h3>Read More</h3>
+        <h3>RELATED ARTICLES</h3>
         <div className="other__posts__grid">
 
         {morePosts ? (
-          morePosts.map(item => {
-          return <div className="other__post__block">
-            <img src={item.jetpack_featured_media_url} />
+          morePosts.map((post, index) => {
+          const imageUrl = post.jetpack_featured_media_url;
+          const dateString = post.date.split("T")[0];
+          const date = new Date(dateString);
+          const options = { month: 'short', day: 'numeric', year: 'numeric' };
+          const formattedDate = date.toLocaleString('en-US', options);
+          let postCategory = post.categories[0];
+          const categoryNameWithoutAmp = postCategory.replace(/&amp;/g, '&');
+
+
+
+
+          return <div className="blog__preview__div"  key={index} onClick={() => navigate(`/blog/${post.slug}`)}>
+            <img src={imageUrl} />
+                          <p className="blog__preview__title">{post.title.rendered}</p>
           </div>
           })
         ) : (<p>Loading...</p>)}

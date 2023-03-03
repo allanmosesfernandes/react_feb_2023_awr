@@ -43,7 +43,7 @@ body {
   padding: 0;
   background-color: var(--body-color);
   color: var(--base-font-color);
-  font-family: monospace;
+  font-family: "sf-pro", monospace;
   font-weight: 400;
   font-style: normal;
   font-size: var(--small-text-size);

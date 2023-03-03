@@ -8,58 +8,9 @@ import { useNavigate } from "react-router-dom";
 
 const Writing = () => {
   const [posts, setPosts] = useState([]);
-  // const [imageUrls, setImageUrls] = useState([]);
-  // const [categoryNames, setCategoryNames] = useState([]);
   const navigate = useNavigate();
 
-  // useEffect(() => {
-  //   axios
-  //     .get("https://ankanchittalipi.com/wp-json/wp/v2/posts")
-  //     // .then((response) => {
-  //     //   const homepageCategoryId = response.data[0].id;
-  //     //   return axios.get(
-  //     //     `http://allanmoses.ninja/wp-json/wp/v2/posts?categories=${homepageCategoryId}`
-  //     //   );
-  //     // })
-  //     .then((response) => {
-  //       setPosts(response.data);
-  //       // retrieve all the featured media URLs
-  //       const mediaPromises = response.data.map((post) =>
-  //         axios.get(
-  //           `http://allanmoses.ninja/wp-json/wp/v2/media/${post.featured_media}`
-  //         )
-  //       );
-  //       Promise.all(mediaPromises)
-  //         .then((responses) => {
-  //           const urls = responses.map(
-  //             (response) =>
-  //               response.data.media_details.sizes["medium"].source_url
-  //           );
-  //           setImageUrls(urls);
-  //         })
-  //         .catch((error) => {
-  //           console.error(error);
-  //         });
-  //       // retrieve category names
-  //       const categoryPromises = response.data.map((post) =>
-  //         axios.get(
-  //           `http://allanmoses.ninja/wp-json/wp/v2/categories/${post.categories[1]}`
-  //         )
-  //       );
-  //       Promise.all(categoryPromises)
-  //         .then((responses) => {
-  //           const names = responses.map((response) => response.data.name);
-  //           setCategoryNames(names);
-  //         })
-  //         .catch((error) => {
-  //           console.error(error);
-  //         });
-  //     })
-  //     .catch((error) => {
-  //       console.error(error);
-  //     });
-  // }, []);
- 
+
  useEffect(() => {
         axios.get("https://ankanchittalipi.com/wp-json/wp/v2/posts")
       .then((response) => {
