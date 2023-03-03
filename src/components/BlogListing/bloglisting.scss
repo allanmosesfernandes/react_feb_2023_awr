@@ -46,5 +46,21 @@
 }
 
 @media only screen and (max-width: 600px) {
-  //code goes here
-}   
+
+    //code goes here
+    .blog__listing__container {
+        width: 100%;
+    }
+
+    .blog__listing__div {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2rem;
+    }
+
+    .listing__image {
+        width: 100%;
+        height: auto;
+    }
+}
