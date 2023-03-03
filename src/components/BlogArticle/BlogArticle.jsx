@@ -42,7 +42,6 @@ const BlogArticle = () => {
 
   return (
     <>
-
     <div className='wrapper blog__article'>
     {post ? (
         <div className="blog__article__wrapper">

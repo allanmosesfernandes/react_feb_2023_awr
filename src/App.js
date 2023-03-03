@@ -7,6 +7,7 @@ import PageNotFound from './routes/404';
 import BlogArticle from './components/BlogArticle/BlogArticle';
 import Merchandiser from './components/Merchandiser/Merchandiser';
 import About from './components/About/About';
+import BlogListing from './components/BlogListing/BlogListing';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route index element={<FirstFold />} />
         <Route path='fashion-merchandiser' element={<Merchandiser />} />
         <Route path='about' element={<About />} />
+        <Route path='blog' element={<BlogListing />} />
         <Route path="*" element={<PageNotFound />} />
         <Route path="blog/:slug" element={<BlogArticle />} />
       </Route>

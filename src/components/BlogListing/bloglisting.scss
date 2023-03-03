@@ -1,0 +1,35 @@
+.blog__listing {
+    padding: var(--body-padding);
+    margin: 3rem 0;
+    font-size: var(--medium-text-size);
+    flex-direction: column;
+}
+
+.blog__listing__container {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: 3rem auto;
+
+}
+
+.blog__listing__div {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.listing__image {
+    width: 200px;
+    height: 200px;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+}
+
+.listing__date {
+    color: gray;
+}
