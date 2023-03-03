@@ -6,8 +6,6 @@ import axios from "axios";
 
 const BlogArticle = () => {
 
-
-
   const navigate = useNavigate();
 
     const [post, setPost] = useState(null);
@@ -15,6 +13,7 @@ const BlogArticle = () => {
 
    const {slug} = useParams();
      useEffect(() => {
+    window.scrollTo(0,0)
     axios.get(`https://ankanchittalipi.com/wp-json/wp/v2/posts?slug=${slug}&_embed`)
       .then(response => {
         setPost(response.data[0]);
@@ -22,7 +21,6 @@ const BlogArticle = () => {
       .catch(error => {
         console.error(error);
       });
-        // Fetch other posts
   axios.get(`https://ankanchittalipi.com/wp-json/wp/v2/posts?exclude=${post ? post.id : ''}&per_page=3&_embed`)
     .then(response => {
       setMorePosts(response.data);
@@ -31,9 +29,8 @@ const BlogArticle = () => {
       console.error(error);
     });
   }, [slug]);
-  useEffect(() => {
-  window.scrollTo(0, 0);
-}, [slug]);
+
+
     let formattedDate = null;
     if (post) {
         const dateString = post.date.split("T")[0];
@@ -57,7 +54,7 @@ const BlogArticle = () => {
           <div className="blog__article__content" dangerouslySetInnerHTML={{ __html: post.content.rendered }} />
         </div>
       ) : (
-        <p className="load"><span class="loader"></span></p>
+        <p className="load"><span className="loader"></span></p>
       )}
 
     </div>
@@ -94,7 +91,7 @@ const BlogArticle = () => {
               </div>
             </div>
           })
-        ) : (<p className="load"><span class="loader"></span></p>
+        ) : (<p className="load"><span className="loader"></span></p>
 )}
 
         </div>
