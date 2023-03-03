@@ -13,10 +13,20 @@
 
 }
 
+.number {
+    font-size: 1.2rem;
+    color: gray;
+}
+
 .blog__listing__div {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr;
     align-items: center;
     justify-content: space-around;
+    margin: 2rem 0;
+    padding-bottom: 2rem;
+    border-bottom: 2px solid rgb(214 214 214);
+    cursor: pointer;
 }
 
 .listing__image {
@@ -26,10 +36,15 @@
     img {
         width: 100%;
         height: 100%;
-        object-fit: contain;
+        object-fit: cover;
     }
 }
 
 .listing__date {
     color: gray;
+    margin-bottom: 0;
 }
+
+@media only screen and (max-width: 600px) {
+  //code goes here
+}   
