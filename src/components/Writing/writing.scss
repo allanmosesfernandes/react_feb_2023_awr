@@ -86,6 +86,11 @@
         height: 300px;
         object-fit: cover;
         width: 100%;
+        filter: grayscale(1);
+        transition: all 0.3s ease;
+        &:hover {
+            filter: grayscale(0);
+        }
     }
 }
 

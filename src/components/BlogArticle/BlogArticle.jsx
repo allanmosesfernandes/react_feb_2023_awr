@@ -6,9 +6,7 @@ import axios from "axios";
 
 const BlogArticle = () => {
 
-  useEffect(() => {
-  window.scrollTo(0, 0);
-}, []);
+
 
   const navigate = useNavigate();
 
@@ -33,7 +31,9 @@ const BlogArticle = () => {
       console.error(error);
     });
   }, [slug]);
-
+  useEffect(() => {
+  window.scrollTo(0, 0);
+}, [slug]);
     let formattedDate = null;
     if (post) {
         const dateString = post.date.split("T")[0];
@@ -45,6 +45,7 @@ const BlogArticle = () => {
 
   return (
     <>
+
     <div className='wrapper blog__article'>
     {post ? (
         <div className="blog__article__wrapper">
@@ -56,13 +57,17 @@ const BlogArticle = () => {
           <div className="blog__article__content" dangerouslySetInnerHTML={{ __html: post.content.rendered }} />
         </div>
       ) : (
-        <p>Loading...</p>
+        <p className="load"><span class="loader"></span></p>
       )}
 
     </div>
 
     <div className="blog__other__posts wrapper">
+      <div className="intro-container">
         <h3>RELATED ARTICLES</h3>
+        <p>See more ↘</p>
+      </div>
+
         <div className="other__posts__grid">
 
         {morePosts ? (
@@ -78,12 +83,19 @@ const BlogArticle = () => {
 
 
 
-          return <div className="blog__preview__div"  key={index} onClick={() => navigate(`/blog/${post.slug}`)}>
-            <img src={imageUrl} />
-                          <p className="blog__preview__title">{post.title.rendered}</p>
-          </div>
+          return <div className="blog__preview__div" key={index} onClick={() => navigate(`/blog/${post.slug}`)}>
+              <img src={imageUrl} alt="" />
+              <p className="blog__preview__title">{post.title.rendered}</p>
+              <div className="blog__preview__bottom">
+                <div className="blog__preview__date"><span><hr /></span>{formattedDate}</div>
+                <div className="blog__preview__category related">
+                  {categoryNameWithoutAmp}
+                </div>
+              </div>
+            </div>
           })
-        ) : (<p>Loading...</p>)}
+        ) : (<p className="load"><span class="loader"></span></p>
+)}
 
         </div>
     </div>

@@ -51,7 +51,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
-
 }
 
 /* Reset default styles for heading elements */
@@ -110,3 +109,29 @@ a {
   color: inherit;
   text-decoration: none;
 }
+
+.load {
+      display: flex;
+    justify-content: center;
+    margin: 2rem 0;
+    width: 100%;
+}
+.loader {
+    width: 48px;
+    height: 48px;
+    border: 5px solid var(--theme-color);
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+    }
+
+    @keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+    } 
