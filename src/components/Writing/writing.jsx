@@ -54,7 +54,13 @@ const Writing = () => {
             </div>
           );
         })}
+
+                        
+                
       </div>
+
+      <Link to="blog"><button className="writings button-50">Read More</button></Link>
+
     </div>
   );
 };

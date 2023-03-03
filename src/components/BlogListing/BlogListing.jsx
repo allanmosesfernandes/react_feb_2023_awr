@@ -1,6 +1,5 @@
 import {React, useState, useEffect} from 'react';
 import "./bloglisting.scss";
-import ankan from "../../assets/images/ankan_bg.jpg";
 import { useNavigate, Link, Navigate } from "react-router-dom";
 import axios from "axios";
 

@@ -47,7 +47,7 @@ const SecondFold = () => {
                 <h4 className='attribute__post'>Trend Forecaster</h4>
                 <img src={Arrow} alt="Arrow" className='what_arrow'/>
 
-                <button className="button-50">Learn More</button>
+               <Link to="blog"><button className="button-50">Learn More</button></Link> 
             </div>
         </div>
     </div>
