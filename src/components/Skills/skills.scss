@@ -1,0 +1,42 @@
+.skills-container {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    img {
+        width: 200px;
+        margin: auto;
+        display: flex;
+    }
+
+    h2 {
+        font-family: "sf-pro-light";
+        font-size: var(--extra-large-text);
+        margin: 3rem 0;
+    }
+}
+
+.skills__block__container {
+    display: flex;
+
+}
+
+.skills__tools__left {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    img {
+        width: 50px;
+        height: 50px;
+        margin: 0;
+    }
+
+    .icons {
+        display: flex;
+        gap: 3rem;
+    }
+}
+.skills__details {
+    line-height: 1.5;
+}

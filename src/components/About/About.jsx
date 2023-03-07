@@ -2,6 +2,9 @@ import React, { useState, useEffect } from 'react'
 import "./about.scss";
 import WorkTimeLine from '../Work/WorkTimeLine';
 import Quote from "../../assets/images/quotes.svg";
+import SkillsComponent from '../Skills/SkillsComponent';
+
+
 const About = () => {
     
 useEffect(() => {
@@ -70,7 +73,7 @@ const mouseHoverOver = (e) => {
 return (
 <div className='wrapper about_me' id="hi">
     <div className="about__me__second__fold">
-        <h2>Hi there, I'm <span>Ankan</span>.</h2>
+        <h2>Hi there, I'm <span style={{color:"#ff5757"}}>Ankan.</span></h2>
         <div className="second_fold_block">
             <div>
                 <button className='about_me_btn'>Also Chittu, or Meow</button>
@@ -78,7 +81,7 @@ return (
 
             <div className="about__me__txt">
                 <p>
-                    A strategist by heart, I specialize in buying & merchandising with 5+ years of work experience with premium international brands and currently widening my portfolio in the luxury sphere as a buyer.
+                    A <span style={{color:"#ff5757"}}>strategist</span> by heart, I specialize in <span style={{color:"#ff5757"}}>buying & merchandising</span> with <strong>5+ years</strong>  of work experience with premium international brands and currently widening my portfolio in the luxury sphere as a <span style={{color:"#ff5757"}}>buyer.</span>
                 </p>
                  <p>
                     Zealous about menswear & womenswear RTW, menswear & womenswear athleisure, menswear & womenswear sport, leather home & accessories
@@ -191,7 +194,14 @@ return (
             </div>
 
         </div>
+
     </div>
+
+    <SkillsComponent />
+    {/*==== Skills Component ====*/} 
+
+
+
     {/*==== Work Timeline Component ====*/}    
     <WorkTimeLine />
 </div>
