@@ -3,6 +3,7 @@ import "./skills.scss";
 import Robot from "../../assets/images/skills/robot.png"
 import Analysis from "../../assets/images/skills/analysis.png"
 import Tools from "../../assets/images/skills/digital-tools.png"
+import ERP from "../../assets/images/skills/erp.png"
 const SkillsComponent = () => {
   return (
     <div className='skills-container'>
@@ -12,14 +13,14 @@ const SkillsComponent = () => {
             <div className="icons">
                 <img src={Analysis} alt="Analysis" />
                 <div className='skills__details'>
-                    <h3>Analysis Tools</h3>
+                    <h3>Analysis </h3>
                     <p>
                         As part of my portfolio, I possess a strong command of a range of analysis tools, including MS Excel, Power BI, Tableau, and PLM software, which enable me to perform efficient and accurate data analysis.
                     </p>
                 </div>
             </div>
             <div className="icons">
-                <img src={Analysis} alt="Analysis" />
+                <img src={ERP} alt="Analysis" />
                 <div className='skills__details'>
                     <h3>ERP Tools</h3>
                     <p>
