@@ -9,7 +9,7 @@ const Spotify = () => {
         <img src={PlayList} alt="PLaylist takeover" />
         <div className="playlist__content">
             <p>
-                At the intersection of music and fashion lies a world of creativity and self-expression that has captivated me for years. I believe that the right song can set the tone for any moment so take a peek behind the curtain and see what's on my playlist 
+                At the intersection of <span>music</span> and <span>fashion</span> lies a world of creativity and <span>self-expression</span> that has captivated me for years. I believe that the right song can set the tone for any moment so take a peek behind the curtain and see what's on my <span>playlist.</span> 
             </p>
         </div>
         </div>

@@ -14,7 +14,7 @@ import Circle from "../../assets/images/brands/circle.svg";
 const Brands = () => {
   return (
     <div className='brands__container'>
-        <h4>Brand's I've  worked with </h4>
+        <h4>Brand's I've  <span style={{color:"#ff5757"}}>worked</span> with </h4>
         <Marquee gradient="false" speed="30" gradientWidth="0">
 
             <div className="brand__box calvin_klien">

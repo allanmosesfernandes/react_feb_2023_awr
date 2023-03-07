@@ -15,6 +15,11 @@
 .playlist__content {
     font-size: var(--medium-text-size);
     line-height: 1.5;
+
+    span {
+        color: var(--theme-color);
+        font-weight: bold;
+    }
 }
 
 .spotify__playlist {
