@@ -4,7 +4,13 @@
     font-size: var(--medium-text-size);
     flex-direction: column;
         margin: auto;
+    h2 {
+        width: 75%;
+    }
 
+    span {
+        color: var(--theme-color);
+    }
 }
 
 .blog__listing__container {
@@ -17,8 +23,8 @@
 
 .number {
     font-size: 1.2rem;
-    color: gray;
-}
+    color: var(--theme-color);
+    font-weight: bold;}
 
 .blog__listing__div {
     display: grid;
@@ -48,7 +54,12 @@
 }
 
 @media only screen and (max-width: 600px) {
+.blog__listing {
 
+    h2 {
+        width: 100%;
+    }
+}
     //code goes here
     .blog__listing__container {
         width: 100%;
