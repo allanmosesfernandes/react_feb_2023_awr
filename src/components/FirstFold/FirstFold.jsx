@@ -7,6 +7,8 @@ import Brands from '../Brands/Brands';
 import Writing from '../Writing/writing';
 import WeeklyInspiration from '../WeeklyInspiration/WeeklyInspiration';
 
+import Spotify from '../Spotify/Spotify';
+
 
 const FirstFold = () => {
 
@@ -42,6 +44,7 @@ const FirstFold = () => {
     <Brands /> 
     <WeeklyInspiration />
     <Writing />
+    <Spotify />
     </>
 
   )

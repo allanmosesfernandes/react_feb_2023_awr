@@ -1,0 +1,55 @@
+.spotify__wrapper {
+    padding: var(--body-padding);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+
+    img {
+        width: 100%;
+        margin: 2rem 0;
+        padding-bottom: 5rem;
+        border-bottom: 5px solid var(--theme-color);
+    }
+}
+
+.playlist__content {
+    font-size: var(--medium-text-size);
+    line-height: 1.5;
+}
+
+.spotify__playlist {
+    display: flex;
+    align-items: center;
+}
+
+.spotiy {
+    border-radius: 12px;
+    width: 100%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    outline: none;
+}
+
+@media only screen and (max-width: 600px) {
+
+    //code goes here
+    .spotify__wrapper {
+
+        grid-template-columns: 1fr;
+        gap: 2rem;
+
+    }
+
+    .spotify__playlist {
+        height: 500px;
+    }
+
+    .spotiy {
+
+        height: 100%;
+    }
+
+}
