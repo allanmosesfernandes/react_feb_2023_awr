@@ -13,7 +13,7 @@ const WeeklyInspiration = () => {
   return (
     <div className='weekly__inspiration '>
     <h2>Visual Musings</h2>
-    <p>What's been <span className='sf-italic'>inspiring</span> me lately</p>
+    <p>What's been <span className='sf-italic' style={{color:"#ff5757"}}>inspiring</span> me lately</p>
       <div className="image__grid__container">
         {images.map((image, index) => {
           let imageURL = image.image_url;

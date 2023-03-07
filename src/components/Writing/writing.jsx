@@ -28,7 +28,7 @@ const Writing = () => {
         I've got <span><img src={Star} alt="Star" className="rotating__star" /> </span>
       </p>
       <p className="blog__body__copy">
-        <span className="cursive__inline">exciting insight </span>for you
+        <span className="cursive__inline">exciting <span style={{color:"#ff5757"}}>insight</span> </span>for you
       </p>
 
       <div className="blog__preview__container">
