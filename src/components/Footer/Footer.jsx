@@ -8,8 +8,6 @@ import { Link, useLocation } from 'react-router-dom';
 import AF from "../../assets/images/AF.svg"
 import Top from "../../assets/images/top.svg"
 
-
-
 const Footer = () => {
   const location = useLocation();
   useEffect(() => {
@@ -73,7 +71,6 @@ let currentYear = new Date().getFullYear();
                © {currentYear} All rights reserved.
             </p>
             <div className="created_by">
-
             </div>
         </div>
     </footer>
