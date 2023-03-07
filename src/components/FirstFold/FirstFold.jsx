@@ -10,7 +10,9 @@ import WeeklyInspiration from '../WeeklyInspiration/WeeklyInspiration';
 
 const FirstFold = () => {
 
-
+ useEffect(() => {
+  window.scrollTo(0,0);
+  }, []);
   return (
     <>
       <div className='wrapper first-fold' id="first_fold">

@@ -3,6 +3,10 @@ import "./about.scss";
 import WorkTimeLine from '../Work/WorkTimeLine';
 import Quote from "../../assets/images/quotes.svg";
 const About = () => {
+    
+useEffect(() => {
+  window.scrollTo(0, 0);
+}, []);
 
 const [text ,setText] = useState({
 
@@ -32,9 +36,6 @@ const [text ,setText] = useState({
 
 })
 
-useEffect(() => {
-  window.scrollTo(0, 0);
-}, []);
 
 const mouseHover = (e) => {
   let atts = e.target.getAttribute('data-custom');

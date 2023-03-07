@@ -10,6 +10,7 @@ import About from './components/About/About';
 import BlogListing from './components/BlogListing/BlogListing';
 
 function App() {
+  
   return (
 <>
     <Routes>

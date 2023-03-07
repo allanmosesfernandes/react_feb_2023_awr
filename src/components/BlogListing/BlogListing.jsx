@@ -6,6 +6,8 @@ import axios from "axios";
 
 const BlogListing = () => {
   const [posts, setPosts] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+
   const navigate = useNavigate();
 
   
@@ -15,6 +17,7 @@ const BlogListing = () => {
       .then((response) => {
         const fetchedPosts = response.data;
         setPosts(fetchedPosts);
+        setIsLoading(false);
       })
       .catch((error) => {
         console.log(error);
@@ -24,34 +27,29 @@ const BlogListing = () => {
   return (
     <div className='wrapper blog__listing'>
       <h2>Sometimes I write about stuff that just makes sense -</h2>
-      <div className="blog__listing__container">
-          {posts ? (
-            posts.map((post, index) => {
-              const imageUrl = post.jetpack_featured_media_url;
-              const year = post.date.split("-")[0]
+      {isLoading ? (
+        <div className="loader"></div>
+      ) : (
+        <div className="blog__listing__container">
+          {posts.map((post, index) => {
+            const imageUrl = post.jetpack_featured_media_url;
+            const year = post.date.split("-")[0];
 
-              return (
-                <div className="blog__listing__div" key={index}  onClick={() => navigate(`/blog/${post.slug}`)}>
-
-                  <div className="number">{index < 10 ? `0${index + 1}`: index + 1}.</div>
-                  <div className="listing__image">
-                    <img src={imageUrl} alt="" />
-                  </div>
-                  <div className="listing__details">
-                    <p className="listing__date">{year}</p>
-                    <h3 className="listing-title">{post.title.rendered}</h3>
-                  </div>
-     
+            return (
+              <div className="blog__listing__div" key={index} onClick={() => navigate(`/blog/${post.slug}`)}>
+                <div className="number">{index < 10 ? `0${index + 1}` : index + 1}.</div>
+                <div className="listing__image">
+                  <img src={imageUrl} alt="" />
+                </div>
+                <div className="listing__details">
+                  <p className="listing__date">{year}</p>
+                  <h3 className="listing-title">{post.title.rendered}</h3>
+                </div>
               </div>
-              );
-            })
-          ) : (
-            <p className="load">
-              <span className="loader"></span>
-            </p>
-          )}
-
-      </div>
+            );
+          })}
+        </div>
+      )}
     </div>
   )
 }

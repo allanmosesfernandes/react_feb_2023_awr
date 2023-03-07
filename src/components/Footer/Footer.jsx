@@ -1,20 +1,25 @@
-import React from 'react';
+import {React, useEffect} from 'react';
 import "./Footer.scss";
 import Arrow from "../../assets/images/arrow.svg";
 import { faLinkedinIn, faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import AF from "../../assets/images/AF.svg"
 import Top from "../../assets/images/top.svg"
 
 
 
 const Footer = () => {
+  const location = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
 
 const goToTopHandler = () => {
     window.scrollTo(0,0);
 }
+
 let currentYear = new Date().getFullYear();
   return (
     <footer>

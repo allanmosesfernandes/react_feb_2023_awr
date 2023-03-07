@@ -15,12 +15,12 @@
 @media only screen and (max-width: 600px) {
 
   :root {
-  --extra-large-text: 3rem;
-  --large-text-size: 3rem;
-  --medium-text-size: 1.5rem;
-  --small-text-size: 1.6rem;
-  --body-padding: 1rem;
-}
+    --extra-large-text: 3rem;
+    --large-text-size: 3rem;
+    --medium-text-size: 1.5rem;
+    --small-text-size: 1.6rem;
+    --body-padding: 1rem;
+  }
 }
 
 html {
@@ -33,6 +33,7 @@ html {
   display: flex;
   margin: auto;
 }
+
 * {
   box-sizing: border-box;
 }
@@ -111,27 +112,39 @@ a {
 }
 
 .load {
-      display: flex;
-    justify-content: center;
-    margin: 2rem 0;
-    width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+  width: 100%;
+  margin: auto;
 }
-.loader {
-    width: 48px;
-    height: 48px;
-    border: 5px solid var(--theme-color);
-    border-bottom-color: transparent;
-    border-radius: 50%;
-    display: inline-block;
-    box-sizing: border-box;
-    animation: rotation 1s linear infinite;
-    }
 
-    @keyframes rotation {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
-    } 
+.loader {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  margin: 5rem auto;
+  border: 10px solid;
+  box-sizing: border-box;
+  animation: animloader 1s linear infinite alternate;
+}
+
+@keyframes animloader {
+  0% {
+    border-color: var(--theme-color) rgba(255, 255, 255, 0) rgba(255, 255, 255, 0) rgba(255, 255, 255, 0);
+  }
+
+  33% {
+    border-color: var(--theme-color) var(--theme-color) rgba(255, 255, 255, 0) rgba(255, 255, 255, 0);
+  }
+
+  66% {
+    border-color: var(--theme-color) var(--theme-color) var(--theme-color) rgba(255, 255, 255, 0);
+  }
+
+  100% {
+    border-color: var(--theme-color) var(--theme-color) var(--theme-color) var(--theme-color);
+  }
+}
