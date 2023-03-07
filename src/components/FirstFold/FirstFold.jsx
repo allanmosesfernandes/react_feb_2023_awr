@@ -17,7 +17,7 @@ const FirstFold = () => {
       <div className="text__left">
 
        <div className="future-of-fashion">
-        <p>the future of <br />fashion</p>
+        <p>the future of <br /><span style={{color:"#ff5757"}}>fashion</span></p>
       </div>
 
       <div className="body-copy">

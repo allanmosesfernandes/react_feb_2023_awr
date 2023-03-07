@@ -7,11 +7,16 @@ import "./Header.scss";
 
 
 const Header = () => {
-
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
   const [navbarChange, setNavbarChange] = useState(false);
 
   const changeColor = () => {
-    if(window.scrollY >= 100) {
+    if(window.scrollY >= 90) {
       setNavbarChange(true);
     }
     else {
@@ -28,17 +33,14 @@ window.addEventListener("scroll", changeColor);
   return (
     <>
     <nav id='#nav'  className={navbarChange ? "header-bg" : ""}>
-        <div className="left">
-            <FontAwesomeIcon icon={faBars} />
-        </div>
-        <div className="logo">
-          <Link to="/">ankan c.</Link>
-            
+
+        <div className="logo" onClick={scrollToTop}>
+          <Link to="/">Ankan Chittalipi</Link>
         </div>
         <div className="header-right">
-           <Link className='hide_on_mobile' to="blog">
+          <Link className='' to="about">About</Link>
+           <Link className='' to="blog">
             <button className="button-4">BLOG</button></Link> 
-          <Link className='hide_on_mobile' to="/about">about</Link>
         </div>
     </nav>
     
