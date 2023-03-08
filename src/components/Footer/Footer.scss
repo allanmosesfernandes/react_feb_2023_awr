@@ -13,7 +13,7 @@ footer {
 }
 
 .created_by span {
-    text-decoration: underline;
+    color: var(--theme-color) !important;
 }
 
 .footer__links {
@@ -66,10 +66,10 @@ footer {
     align-items: center;
     justify-content: center;
     gap: 2rem;
-    margin: 3rem 0 1rem 0;
+    margin: 3rem 0;
 
     a {
-        text-decoration: underline;
+       color: var(--theme-color);
         display: flex;
         align-items: center;
         gap: 2rem;

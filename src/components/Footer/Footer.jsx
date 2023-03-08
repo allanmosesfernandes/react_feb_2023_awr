@@ -68,12 +68,13 @@ let currentYear = new Date().getFullYear();
         </div>
 
         <div className="terms__conditions">
-            <p className="terms">
-               © {currentYear} All rights reserved.
-            </p>
+
             <div className="created_by">
                 <Link to="https://allanfernandes.dev/">Created by <img src={AF} alt="" className='initials'/></Link>
             </div>
+                        <p className="terms">
+               © {currentYear} All rights reserved.
+            </p>
         </div>
     </footer>
   )
