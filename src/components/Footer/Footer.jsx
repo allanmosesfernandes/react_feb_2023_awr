@@ -5,7 +5,8 @@ import { faLinkedinIn, faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
 import { Link, useLocation } from 'react-router-dom';
-import AF from "../../assets/images/AF.svg"
+import AF from "../../assets/images/sale.png"
+import Circle from "../../assets/images/3.svg"
 import Top from "../../assets/images/top.svg"
 
 const Footer = () => {
@@ -71,6 +72,7 @@ let currentYear = new Date().getFullYear();
                © {currentYear} All rights reserved.
             </p>
             <div className="created_by">
+                <Link to="https://allanfernandes.dev/">Created by <img src={AF} alt="" className='initials'/></Link>
             </div>
         </div>
     </footer>

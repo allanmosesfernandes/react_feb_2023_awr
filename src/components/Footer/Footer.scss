@@ -11,6 +11,7 @@ footer {
         margin: 0;
     }
 }
+
 .created_by span {
     text-decoration: underline;
 }
@@ -47,6 +48,7 @@ footer {
         align-items: center;
         width: 80px;
         height: 80px;
+
         &:hover {
             background-color: #f2f2f2;
             color: #ff5757;
@@ -63,9 +65,14 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 2rem;
+    margin: 3rem 0 1rem 0;
 
-    img {
-        width: 50px;
+    a {
+        text-decoration: underline;
+        display: flex;
+        align-items: center;
+        gap: 2rem;
     }
 }
 
@@ -91,9 +98,11 @@ footer {
     align-items: center;
 
 }
+
 .terms__conditions {
     text-align: center;
 }
+
 @media only screen and (max-width: 767px) {
 
     .socials {
@@ -101,9 +110,11 @@ footer {
         padding: 2rem;
         margin: 1rem 0;
     }
-.page_not_found p {
-    font-size: var(--medium-text-size) !important;
-}
+
+    .page_not_found p {
+        font-size: var(--medium-text-size) !important;
+    }
+
     //code goes here
     footer {
 
@@ -142,18 +153,32 @@ footer {
         }
     }
 
-    .footer__hello {
-        img {
-            width: 50px;
-        }
-    }
 
     .arrow_div {
         padding: 0;
         margin: 1rem 0;
+
         img {
             width: 15px;
             height: 15px;
         }
     }
 }
+
+
+.initials {
+    position: relative;
+    width: 75px;
+    animation: spin 15s linear infinite;
+}
+
+
+
+
+
+// .initials::before {
+//     content: "dfdf";
+//     width: 200px;
+//     height: 200px;
+//     background-image: url("../../assets/images/3.svg");
+// }
