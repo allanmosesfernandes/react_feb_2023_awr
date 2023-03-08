@@ -48,7 +48,7 @@ const WorkTimeLine = () => {
         date="May’18-July’21"
         iconStyle={{ background: '#ff5757', color: '#fff' }}
         icon={<WorkOutlineIcon />}>
-        <h5 className="vertical-timeline-element-title">Mumbai, India</h5>
+        <h5 className="vertical-timeline-element-title">Bangalore, India</h5>
         <h3 className="vertical-timeline-element-subtitle">Assistant Buyer</h3>
         <p>Calvin Klein Jeans & Tommy Hilfiger</p>
       </VerticalTimelineElement>
@@ -78,7 +78,7 @@ const WorkTimeLine = () => {
         date="July’14-May’16"
         iconStyle={{ background: '#ff5757', color: '#fff' }}
         icon={<SchoolIcon />}>
-        <h5 className="vertical-timeline-element-title">Bhopal, India</h5>
+        <h5 className="vertical-timeline-element-title">Gandhinagar, India</h5>
         <h3 className="vertical-timeline-element-subtitle">National Institute of Fashion Technology</h3>
         <p>Masters in Fashion Management</p>
       </VerticalTimelineElement>

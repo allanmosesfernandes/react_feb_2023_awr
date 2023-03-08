@@ -14,7 +14,7 @@ const Spotify = () => {
         </div>
         </div>
 <div className="spotify__playlist">
-<iframe className="spotiy" src="https://open.spotify.com/embed/playlist/0fs2HLCdVuWej8mo9Egwhp?utm_source=generator"  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+      <iframe className="spotiy" src="https://open.spotify.com/embed/playlist/0fs2HLCdVuWej8mo9Egwhp?utm_source=generator"  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 </div>
 
     </div>

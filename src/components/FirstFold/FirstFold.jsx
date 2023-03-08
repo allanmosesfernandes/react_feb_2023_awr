@@ -29,14 +29,13 @@ const FirstFold = () => {
       </div> 
       </div>
       <div className="image__center">
-      <img src={ankan} alt="ankan" className='ankan_img'/>
+      {/* <img src={ankan} alt="ankan" className='ankan_img'/> */}
         <span>
           <img src={thread} alt="thread" className='thread'/>
         </span>  
       </div> 
       <div className="photo__by">
-        {/* <strong>PHOTO BY:</strong>
-        <span>PK Photography</span> */}
+
       </div>
 
     </div> 
