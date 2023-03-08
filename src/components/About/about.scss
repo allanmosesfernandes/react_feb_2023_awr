@@ -76,15 +76,14 @@
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 5rem;
-    grid-row: 200px;
+    gap: 3rem;
 }
 
 .principle__capsule {
     justify-content: center;
     display: flex;
     align-items: center;
-    min-height: 200px;
+    min-height: 150px;
     position: relative;
     background-color: #f9f9eb;
     border-radius: 100px;
@@ -115,7 +114,7 @@
 }
 
 .shorty {
-    font-size: var(--large-text-size);
+    font-size: var(--medium-text-size);
     opacity: 1;
     transition: all 0.9s ease;
     transform: translateY(0);
@@ -125,7 +124,7 @@
     opacity: 0;
     position: absolute;
     transform: translateY(-10%);
-    font-size: var(--large-text-size);
+    font-size: var(--medium-text-size);
 
 }
 
@@ -133,6 +132,7 @@
     transform: translateY(90%);
     opacity: 0;
     position: absolute;
+    z-index: -1;
 }
 
 .show-long-text {
@@ -172,6 +172,7 @@
     .principles__block__container {
         gap: 2rem;
         grid-template-columns: 1fr;
+        margin-bottom: 5rem;
     }
 
     .shorty {
@@ -185,7 +186,6 @@
     .principle__capsule {
 
         height: auto;
-        min-height: auto;
 
         .principle__emoji {
             font-size: 3rem;
@@ -201,6 +201,8 @@
     span {
         color: var(--theme-color);
         font-style: italic;
+        font-weight: bold;
+
     }
 
     font-family: "sf-pro-light";
@@ -222,6 +224,11 @@
 }
 
 @media only screen and (max-width: 600px) {
+
+.principle__emoji {
+        animation: pulse infinite 2s;
+
+}
   //code goes here
   .quotation {
     font-size: 2rem !important;
@@ -231,4 +238,18 @@
    height: 15px;
     left: -2px;
 }
+}
+
+@keyframes pulse {
+	0% {
+		transform: scale(0.95);
+	}
+
+	70% {
+		transform: scale(1.1);
+	}
+
+	100% {
+		transform: scale(0.95);
+	}
 }

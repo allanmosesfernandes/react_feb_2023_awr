@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import "./about.scss";
 import WorkTimeLine from '../Work/WorkTimeLine';
-import Quote from "../../assets/images/quotes.svg";
+import Quote from "../../assets/images/quotesvg.svg";
 import SkillsComponent from '../Skills/SkillsComponent';
 
 
@@ -81,7 +81,7 @@ return (
 
             <div className="about__me__txt">
                 <p>
-                    A <span style={{color:"#ff5757"}}>strategist</span> by heart, I specialize in <span style={{color:"#ff5757"}}>buying & merchandising</span> with <strong>5+ years</strong>  of work experience with premium international brands and currently widening my portfolio in the luxury sphere as a <span style={{color:"#ff5757"}}>buyer.</span>
+                    A strategistby heart, I specialize in <span style={{color:"#ff5757"}}>buying & merchandising</span> with <strong>5+ years</strong>  of work experience with premium international brands and currently widening my portfolio in the luxury sphere as a buyer.
                 </p>
                  <p>
                     Zealous about menswear & womenswear RTW, menswear & womenswear athleisure, menswear & womenswear sport, leather home & accessories
@@ -92,10 +92,9 @@ return (
     </div>
 
 
-
     {/*==== Principles ====*/}    
         <div className="quotation">
-            <p><img src={Quote} className="quote-icon"/>At the center of the <span>macrocosm</span> is a <span className='human_underline'>human truth.</span> </p>
+            <p><span className="marks"><img src={Quote} alt="quote" className='quote-icon'/></span>At the center of the <span>macrocosm</span> is a <span className='human_underline'>human truth.</span> </p>
         </div>
     <div className="about__me__second__fold">
         <h2>Key <span>Principles</span>.</h2>
@@ -107,7 +106,7 @@ return (
 
             <div className="about__me__txt">
                 <p>
-                    Recipe for a good soup in my dictionary- Researching the culturally driven consumer behaviour that’s perpetually evolving & assessing its impact on businesses globally & locally through acute analysis of relevant KPIs.
+                    Adept at researching the culturally driven consumer behaviour that’s perpetually evolving & assessing its impact on businesses globally & locally through acute analysis of relevant KPIs.
                 </p>
 
             </div>
@@ -129,10 +128,11 @@ return (
                 className={`${text.empathy.showLongText ? 'not_shorty' : 'shorty'}`}>
                     Driven by <span>empathy</span>
                 </p>
-                <p 
+                <p  className={`principle__copy ${text.empathy.showLongText ? 'show-long-text' : 'hover__effect'}`}>{text.empathy.long}</p>
+                {/* <p 
                 data-custom="empathy" 
                 className={`principle__copy ${text.empathy.showLongText ? 'show-long-text' : 'hover__effect'}`}>{text.empathy.long}
-                </p>
+                </p> */}
             </div>
             </div>
             <div
