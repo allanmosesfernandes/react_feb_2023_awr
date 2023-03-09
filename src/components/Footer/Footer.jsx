@@ -70,7 +70,7 @@ let currentYear = new Date().getFullYear();
         <div className="terms__conditions">
 
             <div className="created_by">
-                <Link to="https://allanfernandes.dev/">Created by <img src={AF} alt="" className='initials'/></Link>
+                <Link to="https://allanfernandes.dev/">In collaboration with <img src={AF} alt="" className='initials'/></Link>
             </div>
                         <p className="terms">
                © {currentYear} All rights reserved.

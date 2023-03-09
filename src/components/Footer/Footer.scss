@@ -12,7 +12,7 @@ footer {
     }
 }
 
-.created_by span {
+.created_by span span{
     color: var(--theme-color) !important;
 }
 
@@ -69,7 +69,6 @@ footer {
     margin: 3rem 0;
 
     a {
-       color: var(--theme-color);
         display: flex;
         align-items: center;
         gap: 2rem;

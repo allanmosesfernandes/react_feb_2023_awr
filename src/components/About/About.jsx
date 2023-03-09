@@ -76,7 +76,7 @@ return (
         <h2>Hi there, I'm <span style={{color:"#ff5757"}}>Ankan.</span></h2>
         <div className="second_fold_block">
             <div>
-                <button className='about_me_btn'>Dog Lover & A Beach Bum</button>
+                <button className='about_me_btn'>🐶 Lover & Beach 🍑</button>
             </div>
 
             <div className="about__me__txt">
@@ -96,6 +96,12 @@ return (
         <div className="quotation">
             <p><span className="marks"><img src={Quote} alt="quote" className='quote-icon'/></span>At the center of the <span>macrocosm</span> is a <span className='human_underline'>human truth.</span> </p>
         </div>
+                    <div className="about__me__txt">
+                <p>
+                    Adept at researching the culturally driven consumer behaviour that’s perpetually evolving & assessing its impact on businesses globally & locally through acute analysis of relevant KPIs.
+                </p>
+
+            </div>
     <div className="about__me__second__fold">
         <h2>Key <span>Principles</span>.</h2>
 
@@ -104,12 +110,12 @@ return (
                 <button className='about_me_btn'>I follow and believe in</button>
             </div>
 
-            <div className="about__me__txt">
+            {/* <div className="about__me__txt">
                 <p>
                     Adept at researching the culturally driven consumer behaviour that’s perpetually evolving & assessing its impact on businesses globally & locally through acute analysis of relevant KPIs.
                 </p>
 
-            </div>
+            </div> */}
 
         </div>
 

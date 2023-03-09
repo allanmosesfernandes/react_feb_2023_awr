@@ -34,8 +34,8 @@
     display: inline-flex;
     fill: currentcolor;
     font-family: "sf-pro", Arial, sans-serif;
-    font-size: var(--medium-text-size);
-    font-weight: 500;
+    font-size: 1.5rem;
+    font-weight: bold;
     height: 48px;
     justify-content: center;
     line-height: normal;
@@ -62,7 +62,7 @@
 }
 
 .about__me__txt {
-    width: max(40%, 500px);
+    width: 80%;
 
     p {
         font-size: var(--medium-text-size);
@@ -160,7 +160,7 @@
     }
 
     .about__me__txt {
-        width: max(300px, 90%);
+        width: 100%;
 
         p {
             font-size: var(--medium-text-size);
@@ -172,7 +172,7 @@
     .principles__block__container {
         gap: 2rem;
         grid-template-columns: 1fr;
-        margin-bottom: 5rem;
+        margin: 2rem 0 5rem 0;
     }
 
     .shorty {

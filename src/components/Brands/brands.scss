@@ -4,7 +4,6 @@
     h4 {
         font-size: var(--large-text-size);
         font-family: sf-pro, Arial, sans-serif;
-        margin-bottom: 4rem;
     }
 }
 
@@ -38,6 +37,10 @@
     }
 }
 
+
+.marquee-container {
+    margin: 4rem 0;
+}
 @media only screen and (max-width: 600px) {
   //code goes here
 
@@ -45,7 +48,10 @@
 
     h4 {
         font-size: 2.5rem;
-        margin-bottom: 2rem;
     }
   }
+
+  .marquee-container {
+    margin: 2rem 0;
+}
 }
