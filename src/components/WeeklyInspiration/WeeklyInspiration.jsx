@@ -5,7 +5,7 @@ const WeeklyInspiration = () => {
   const [images, setImages] = useState([]);
 
   useEffect(() => {
-    fetch('https://ankanchittalipi.com/wp-json/wp/v2/weekly_inspiration/')
+    fetch('https://blog.ankanchittalipi.com/wp-json/wp/v2/weekly_inspiration/')
       .then(response => response.json())
       .then(data => setImages(data))
       .catch(error => console.error(error));
@@ -16,6 +16,7 @@ const WeeklyInspiration = () => {
     <p>What's been inspiring me lately</p>
       <div className="image__grid__container">
         {images.map((image, index) => {
+          if(index < 5) {
           let imageURL = image.image_url;
           let group = index % 5; 
           const excerptElement = image.excerpt.rendered;
@@ -31,6 +32,8 @@ const WeeklyInspiration = () => {
               <img src={imageURL} alt={`imageTitle`} title={plainExcerpt} />
             </div>
           );
+          }
+
         })}
       </div>
 

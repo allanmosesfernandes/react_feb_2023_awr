@@ -12,7 +12,7 @@ const Writing = () => {
 
 
  useEffect(() => {
-        axios.get("https://ankanchittalipi.com/wp-json/wp/v2/posts")
+        axios.get("https://blog.ankanchittalipi.com/wp-json/wp/v2/posts")
       .then((response) => {
         const fetchedPosts = response.data;
         setPosts(fetchedPosts);
