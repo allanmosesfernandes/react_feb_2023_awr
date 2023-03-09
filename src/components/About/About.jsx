@@ -76,7 +76,7 @@ return (
         <h2>Hi there, I'm <span style={{color:"#ff5757"}}>Ankan.</span></h2>
         <div className="second_fold_block">
             <div>
-                <button className='about_me_btn'>Also Chittu, or Meow</button>
+                <button className='about_me_btn'>Dog Lover & A Beach Bum</button>
             </div>
 
             <div className="about__me__txt">

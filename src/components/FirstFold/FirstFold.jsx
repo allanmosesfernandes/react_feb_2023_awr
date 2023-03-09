@@ -21,11 +21,11 @@ const FirstFold = () => {
       <div className="text__left">
 
        <div className="future-of-fashion">
-        <p>the future of <br /><span style={{color:"#ff5757"}}>fashion</span></p>
+        <p>the <span style={{color:"#ff5757"}}>common</span><br />thread</p>
       </div>
 
       <div className="body-copy">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur sunt distinctio error repellat. Libero dolor tenetur aliquid mollitia animi, dolore quidem repellendus quisquam asperiores maxime. Nemo officiis nulla corporis dolores.
+        Hi, I am Ankan - a fashion buyer, culture researcher, foodie, and perpetual student. I strive for optimization in both people and processes. Let's chat over food and explore my world of varied interests. Visit my website for a glimpse into my personal portfolio and blog. 
       </div> 
       </div>
       <div className="image__center">
