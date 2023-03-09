@@ -5,7 +5,7 @@
     gap: 5rem;
 
     img {
-        width: 100%;
+        width: 80%;
         margin: 2rem 0;
         padding-bottom: 5rem;
         border-bottom: 5px solid var(--theme-color);
@@ -45,7 +45,12 @@
 
         grid-template-columns: 1fr;
         gap: 2rem;
-
+    img {
+        width: 80%;
+        margin: 0;
+        padding-bottom: 2rem;
+        border-bottom: 5px solid var(--theme-color);
+    }
     }
 
     .spotify__playlist {
