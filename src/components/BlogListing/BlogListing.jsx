@@ -26,7 +26,7 @@ const BlogListing = () => {
 
   return (
     <div className='wrapper blog__listing'>
-      <h2>Sometimes I <span>write</span> about stuff that just makes <span>sense-</span> </h2>
+      <h2>Sometimes I write about stuff that just makes <span>sense-</span> </h2>
       {isLoading ? (
         <div className="loader"></div>
       ) : (
