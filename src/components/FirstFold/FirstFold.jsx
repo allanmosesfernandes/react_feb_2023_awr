@@ -25,7 +25,7 @@ const FirstFold = () => {
       </div>
 
       <div className="body-copy">
-        I'm Ankan - a fashion buyer, culture connoisseur, food fanatic, and a lifelong learner. There has always been a <em><strong>common thread</strong></em> of inquisitiveness which has led me on a mission to optimize people and processes, and I believe anything inquisitive makes the journey exciting. Being a person of varied interests, I have two facets that you can have a peek at, now that you’re here!   
+        I'm Ankan - a fashion buyer, culture connoisseur, food fanatic, and a lifelong learner. There has always been a <strong>common thread</strong> of inquisitiveness which has led me on a mission to optimize people and processes, and I believe anything inquisitive makes the journey exciting. Being a person of varied interests, I have two facets that you can have a peek at, now that you’re here!   
  </div> 
       </div>
       <div className="image__center">
