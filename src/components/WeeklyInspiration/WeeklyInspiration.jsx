@@ -3,19 +3,24 @@ import "./weeklyinspiration.scss";
 
 const WeeklyInspiration = () => {
   const [images, setImages] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     fetch('https://blog.ankanchittalipi.com/wp-json/wp/v2/weekly_inspiration/')
       .then(response => response.json())
-      .then(data => setImages(data))
+      .then(data => {
+        setImages(data)
+        setIsLoading(false);
+      })
       .catch(error => console.error(error));
   }, []);
   return (
     <div className='weekly__inspiration '>
     <h2>Visual <span style={{color:"#ff5757"}}>Musings</span></h2>
     <p>What's been inspiring me lately</p>
+
       <div className="image__grid__container">
-        {images.map((image, index) => {
+        { isLoading ? (<div className="loader" style={{display:"flex"}}></div>) : (images.map((image, index) => {
           if(index < 5) {
           let imageURL = image.image_url;
           let group = index % 5; 
@@ -34,7 +39,7 @@ const WeeklyInspiration = () => {
           );
           }
 
-        })}
+        }))}
       </div>
 
 </div>

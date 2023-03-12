@@ -35,7 +35,7 @@ window.addEventListener("scroll", changeColor);
     <nav id='#nav'  className={navbarChange ? "header-bg" : ""}>
 
         <div className="logo" onClick={scrollToTop}>
-          <Link to="/"> Ankan <span style={{color:"#ff5757"}}>C</span>hittalipi</Link>
+          <Link to="/">  <span style={{color:"#ff5757"}}>Ankan</span> Chittalipi</Link>
         </div>
         <div className="header-right">
           <Link className='hide__mobile' to="about">About</Link>

@@ -21,12 +21,12 @@ const FirstFold = () => {
       <div className="text__left">
 
        <div className="future-of-fashion">
-        <p>the <span style={{color:"#ff5757"}}>common</span><br />thread</p>
+        <p>The <span style={{color:"#ff5757"}}>Common</span><br />Thread</p> 
       </div>
 
       <div className="body-copy">
-        I'm Ankan, a fashion buyer, culture researcher, food enthusiast, and perpetual student. My diverse educational background has allowed me to reimagine myself and approach my work with a sense of curiosity and a desire for optimization. I strive to do better and be better in all aspects of my life, driven by my pursuit of optimization in people and processes. As someone with varied interests, feel free to explore the two sides of me - and let's chat, especially over food!
-      </div> 
+        I'm Ankan - a fashion buyer, culture connoisseur, food fanatic, and a lifelong learner. There has always been a <em><strong>common thread</strong></em> of inquisitiveness which has led me on a mission to optimize people and processes, and I believe anything inquisitive makes the journey exciting. Being a person of varied interests, I have two facets that you can have a peek at, now that you’re here!   
+ </div> 
       </div>
       <div className="image__center">
       <img src={ankan} alt="ankan" className='ankan_img'/> 
