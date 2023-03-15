@@ -4,6 +4,10 @@
     flex-direction: column;
 }
 
+.mobile-expand-button {
+    display: none;
+}
+
 .about__me__second__fold {
     margin-top: 3rem;
 
@@ -298,9 +302,25 @@
     }
 }
 
+@media all and (min-width: 600px) {
+    .values-card {
+        &:hover {
+            transform: translate(0px, -20px);
+
+            .values-inital {
+                opacity: 0;
+            }
+        .values-text-slide {
+            opacity: 1;
+            top: 20px;
+            transition: all .25s cubic-bezier(0.46, 0.03, 0.52, 0.96);
+        }
+        }
+
+    }
+}
 
 .values-card {
-
     img {
         margin: auto;
     }
@@ -309,7 +329,6 @@
     span {
         font-size: var(--small-text-size);
         color: var(--theme-color);
-
     }
 
     height: 100%;
@@ -327,6 +346,7 @@
     padding: 3rem;
     gap: 2rem;
     transition: all .25s cubic-bezier(0.46, 0.03, 0.52, 0.96);
+    cursor: pointer;
     position: relative;
     transform: translate(0px, 0px);
 
@@ -334,17 +354,9 @@
         display: flex;
         flex-direction: column;
         gap: 2rem;
-
+        opacity: 1;
         h2 {
             font-size: var(--medium-text-size);
-        }
-    }
-
-    &:hover {
-        transform: translate(0px, -20px);
-
-        .values-inital {
-            opacity: 0;
         }
     }
 
@@ -355,15 +367,6 @@
         top: 0;
         padding: 3rem;
     }
-
-    &:hover {
-
-        .values-text-slide {
-            opacity: 1;
-            top: 20px;
-            transition: all .25s cubic-bezier(0.46, 0.03, 0.52, 0.96);
-        }
-    }
 }
 
 @media only screen and (max-width: 600px) {
@@ -371,17 +374,18 @@
     //code goes here
     .values-card {
         aspect-ratio: 0;
-        &:hover {
-            transform: translate(0, 0);
 
-            .values-inital {
-                opacity: 0;
-            }
+        // &:hover {
+        //     transform: translate(0, 0);
 
-            .mobile-expand-button {
-                transform: rotate(226deg);
-            }
-        }
+        //     .values-inital {
+        //         opacity: 0;
+        //     }
+
+        //     .mobile-expand-button {
+        //         transform: rotate(226deg);
+        //     }
+        // }
     }
 
     .values-container {
@@ -397,10 +401,6 @@
             font-size: 3rem !important;
         }
     }
-}
-
-.mobile-expand-button {
-    display: none;
 }
 
 @media only screen and (max-width: 600px) {

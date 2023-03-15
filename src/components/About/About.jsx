@@ -12,23 +12,24 @@ import PurplePlus from "../../assets/images/principles/purpleplus.svg";
 
 const About = () => {
 const [ isActive, setActive ] = useState(false);
-const ToggleClass = () => {
-    setActive(!isActive); 
-   };
+
+const ToggleClass = (e) => {
+  const cardElement = e.target.offsetParent;
+  cardElement.classList.toggle("active");
+};
+
 useEffect(() => {
   window.scrollTo(0, 0);
 }, []);
 
-const toggleInfo = (e) => {
-    console.log(e.offsetParent);
-}
+
 return (
 <div className='wrapper about_me' id="hi">
     <div className="about__me__second__fold">
         <h2>Hi there, I'm <span style={{color:"#ff5757"}}>Ankan.</span></h2>
         <div className="second_fold_block">
             <div>
-                <button className='about_me_btn'><img src={DogFace}/> Lover & Beach <img src={Peachy} /></button>
+                <button className='about_me_btn'><img src={DogFace} title="Dog"/> Lover & Beach <img src={Peachy} title="Bum"/></button>
             </div>
 
             <div className="about__me__txt">
@@ -62,19 +63,12 @@ return (
                 <button className='about_me_btn'>I follow and believe in</button>
             </div>
 
-            {/* <div className="about__me__txt">
-                <p>
-                    Adept at researching the culturally driven consumer behaviour that’s perpetually evolving & assessing its impact on businesses globally & locally through acute analysis of relevant KPIs.
-                </p>
-
-            </div> */}
 
         </div>
         
         <div className="values-container">
 
-            {/* <div className="values-card empathy"> */}
-            <div className={isActive ? "values-card active": "values-card empathy"}>
+            <div className={isActive ? "values-card active": "values-card"}>
                 <div className="values-inital">
                     <img src={Empathy} alt="Empathy icon" />
                     <h2>Driven by empathy</h2>
