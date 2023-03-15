@@ -20,6 +20,7 @@
 .sf-italic {
     font-family: 'sf-pro-italic' !important;
 }
+
 /* CSS */
 .about_me_btn {
     align-items: center;
@@ -203,6 +204,7 @@
 
 .quotation {
     position: relative;
+
     span {
         color: var(--theme-color);
         font-style: italic;
@@ -223,6 +225,7 @@
     position: absolute;
     left: -20px;
 }
+
 .human_underline {
     display: inline-block;
     position: relative;
@@ -230,31 +233,123 @@
 
 @media only screen and (max-width: 600px) {
 
-.principle__emoji {
+    .principle__emoji {
         animation: pulse infinite 2s;
 
-}
-  //code goes here
-  .quotation {
-    font-size: 2rem !important;
-  }
-  .quote-icon {
-   width: 15px;
-   height: 15px;
-    left: -2px;
-}
+    }
+
+    //code goes here
+    .quotation {
+        font-size: 2rem !important;
+    }
+
+    .quote-icon {
+        width: 15px;
+        height: 15px;
+        left: -2px;
+    }
 }
 
 @keyframes pulse {
-	0% {
-		transform: scale(0.95);
-	}
+    0% {
+        transform: scale(0.95);
+    }
 
-	70% {
-		transform: scale(1.1);
-	}
+    70% {
+        transform: scale(1.1);
+    }
 
-	100% {
-		transform: scale(0.95);
-	}
+    100% {
+        transform: scale(0.95);
+    }
+}
+
+.values-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 3rem;
+    margin: 3rem 0;
+}
+
+.values-card.getter{
+    background-color: #5BD9D6;
+}
+.values-card.evolve{
+    background-color: #552497;
+    color: #FBE504;
+}
+.values-card {
+    img {
+        margin: auto;
+    }
+
+    p,span {
+        font-size: var(--medium-text-size);
+    }
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+    aspect-ratio: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    background-color: #FFE900;
+    color: #552497;
+    margin: auto;
+    padding: 3rem;
+    gap: 2rem;
+    transition: all .25s cubic-bezier(0.46, 0.03, 0.52, 0.96);
+    position: relative;
+    transform: translate(0px, 0px);
+
+    .values-inital {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        h2 {
+            font-size: var(--medium-text-size);
+        }
+    }
+    &:hover {
+        transform: translate(0px, -20px);
+        .values-inital {
+            opacity: 0;
+        }
+    }
+
+    .values-text-slide {
+        opacity: 0;
+        position: absolute;
+        left: 0;
+        top: 0;
+        padding: 3rem;
+    }
+
+    &:hover {
+ 
+        .values-text-slide {
+            opacity: 1;
+            top: 20px;
+            transition: all .25s cubic-bezier(0.46, 0.03, 0.52, 0.96);
+        }
+    }
+}
+
+@media only screen and (max-width: 600px) {
+  //code goes here
+
+  .values-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+    .values-inital {
+
+        h2 {
+            font-size: 3rem !important;
+        }
+    }
 }
