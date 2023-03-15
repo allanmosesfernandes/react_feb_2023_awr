@@ -25,6 +25,7 @@
 .about_me_btn {
     align-items: center;
     appearance: none;
+    min-width: 245px;
     background-color: transparent;
     border-radius: 24px;
     font-weight: bold;
@@ -280,14 +281,35 @@
     color: #FBE504;
 }
 
+.values-card.active {
+
+    .values-text-slide {
+        opacity: 1;
+        top: 20px;
+        transition: all .25s cubic-bezier(0.46, 0.03, 0.52, 0.96);
+    }
+
+    .values-inital {
+        opacity: 0;
+    }
+
+    .mobile-expand-button {
+        transform: rotate(226deg);
+    }
+}
+
+
 .values-card {
+
     img {
         margin: auto;
     }
 
     p,
     span {
-        font-size: var(--medium-text-size);
+        font-size: var(--small-text-size);
+        color: var(--theme-color);
+
     }
 
     height: 100%;
@@ -299,8 +321,8 @@
     align-items: center;
     text-align: center;
     justify-content: center;
-    background-color: #FFE900;
-    color: #552497;
+    background-color: #f9f9eb;
+    color: var(--theme-color);
     margin: auto;
     padding: 3rem;
     gap: 2rem;
@@ -348,6 +370,7 @@
 
     //code goes here
     .values-card {
+        aspect-ratio: 0;
         &:hover {
             transform: translate(0, 0);
 
@@ -365,7 +388,7 @@
         display: grid;
         grid-template-columns: 1fr;
         gap: 2rem;
-        margin: 2rem 0;
+        margin: 2rem;
     }
 
     .values-inital {

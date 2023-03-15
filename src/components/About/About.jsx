@@ -11,13 +11,16 @@ import Evolving from "../../assets/images/principles/evolving.svg";
 import PurplePlus from "../../assets/images/principles/purpleplus.svg";
 
 const About = () => {
-    
+const [ isActive, setActive ] = useState(false);
+const ToggleClass = () => {
+    setActive(!isActive); 
+   };
 useEffect(() => {
   window.scrollTo(0, 0);
 }, []);
 
 const toggleInfo = (e) => {
-    console.log(e)
+    console.log(e.offsetParent);
 }
 return (
 <div className='wrapper about_me' id="hi">
@@ -69,7 +72,9 @@ return (
         </div>
         
         <div className="values-container">
-            <div className="values-card empathy">
+
+            {/* <div className="values-card empathy"> */}
+            <div className={isActive ? "values-card active": "values-card empathy"}>
                 <div className="values-inital">
                     <img src={Empathy} alt="Empathy icon" />
                     <h2>Driven by empathy</h2>
@@ -77,9 +82,9 @@ return (
                 <span className="values-text-slide">
                 I am a strong believer in building collaborative relationships and working towards a common goal through developing creative and disruptive ideas that impact businesses positively.
                 </span>
-                <img src={PurplePlus} alt="" className='mobile-expand-button' onClick={toggleInfo}/>
+                <img src={PurplePlus} alt="" className='mobile-expand-button' onClick={ToggleClass}/>
             </div>
-            <div className="values-card getter">
+            <div className={isActive ? "values-card active ": "values-card"}>
                 <div className="values-inital">
                     <img src={Getter} alt="Empathy icon" />
                     <h2>High-octane go-getter</h2>
@@ -87,10 +92,10 @@ return (
                 <span className="values-text-slide">
                 I thrive in environments that involve high levels of autonomy, innovation, and creativity.
                 </span>
-                                <img src={PurplePlus} alt="" className='mobile-expand-button' onClick={toggleInfo}/>
+                <img src={PurplePlus} alt="" className='mobile-expand-button' onClick={ToggleClass}/>
 
             </div>
-            <div className="values-card evolve">
+            <div className="values-card">
                 <div className="values-inital">
                     <img src={Evolving} alt="Empathy icon" />
                     <h2>Continuously evolving</h2>
@@ -98,7 +103,7 @@ return (
                 <span className="values-text-slide">
                 My sole objective lies in aiming to optimize every process and product and plan to make lives easier and simpler as we go along.
                 </span>
-                                <img src={PurplePlus} alt="" className='mobile-expand-button' onClick={toggleInfo}/>
+                                <img src={PurplePlus} alt="" className='mobile-expand-button' onClick={ToggleClass}/>
 
             </div>
         </div>
