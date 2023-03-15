@@ -8,13 +8,17 @@ import Peachy from "../../assets/images/peachy.png";
 import Empathy from "../../assets/images/principles/collaborative.svg";
 import Getter from "../../assets/images/principles/go-getter.svg";
 import Evolving from "../../assets/images/principles/evolving.svg";
+import PurplePlus from "../../assets/images/principles/purpleplus.svg";
+
 const About = () => {
     
 useEffect(() => {
   window.scrollTo(0, 0);
 }, []);
 
-
+const toggleInfo = (e) => {
+    console.log(e)
+}
 return (
 <div className='wrapper about_me' id="hi">
     <div className="about__me__second__fold">
@@ -73,6 +77,7 @@ return (
                 <span className="values-text-slide">
                 I am a strong believer in building collaborative relationships and working towards a common goal through developing creative and disruptive ideas that impact businesses positively.
                 </span>
+                <img src={PurplePlus} alt="" className='mobile-expand-button' onClick={toggleInfo}/>
             </div>
             <div className="values-card getter">
                 <div className="values-inital">
@@ -82,6 +87,8 @@ return (
                 <span className="values-text-slide">
                 I thrive in environments that involve high levels of autonomy, innovation, and creativity.
                 </span>
+                                <img src={PurplePlus} alt="" className='mobile-expand-button' onClick={toggleInfo}/>
+
             </div>
             <div className="values-card evolve">
                 <div className="values-inital">
@@ -91,6 +98,8 @@ return (
                 <span className="values-text-slide">
                 My sole objective lies in aiming to optimize every process and product and plan to make lives easier and simpler as we go along.
                 </span>
+                                <img src={PurplePlus} alt="" className='mobile-expand-button' onClick={toggleInfo}/>
+
             </div>
         </div>
     </div>

@@ -271,21 +271,25 @@
     margin: 3rem 0;
 }
 
-.values-card.getter{
+.values-card.getter {
     background-color: #5BD9D6;
 }
-.values-card.evolve{
+
+.values-card.evolve {
     background-color: #552497;
     color: #FBE504;
 }
+
 .values-card {
     img {
         margin: auto;
     }
 
-    p,span {
+    p,
+    span {
         font-size: var(--medium-text-size);
     }
+
     height: 100%;
     width: 100%;
     z-index: 2;
@@ -308,12 +312,15 @@
         display: flex;
         flex-direction: column;
         gap: 2rem;
+
         h2 {
             font-size: var(--medium-text-size);
         }
     }
+
     &:hover {
         transform: translate(0px, -20px);
+
         .values-inital {
             opacity: 0;
         }
@@ -328,7 +335,7 @@
     }
 
     &:hover {
- 
+
         .values-text-slide {
             opacity: 1;
             top: 20px;
@@ -338,18 +345,48 @@
 }
 
 @media only screen and (max-width: 600px) {
-  //code goes here
 
-  .values-container {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 2rem;
-    margin: 2rem 0;
-}
+    //code goes here
+    .values-card {
+        &:hover {
+            transform: translate(0, 0);
+
+            .values-inital {
+                opacity: 0;
+            }
+
+            .mobile-expand-button {
+                transform: rotate(226deg);
+            }
+        }
+    }
+
+    .values-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        margin: 2rem 0;
+    }
+
     .values-inital {
 
         h2 {
             font-size: 3rem !important;
         }
     }
+}
+
+.mobile-expand-button {
+    display: none;
+}
+
+@media only screen and (max-width: 600px) {
+
+    //code goes here
+    .mobile-expand-button {
+        display: block;
+        transition: all 0.3s ease;
+    }
+
+
 }

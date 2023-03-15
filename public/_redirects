@@ -1,1 +1,6 @@
 /* /index.html 200
+[[redirects]]
+  from = "http://ankanchittalipi.com/*"
+  to = "https://ankanchittalipi.com/"
+  status = 301
+  force = true
