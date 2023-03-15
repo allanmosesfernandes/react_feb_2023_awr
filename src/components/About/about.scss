@@ -29,7 +29,7 @@
     font-weight: bold;
     border: 3px solid #ff5757;
     box-sizing: border-box;
-    color: #ff5757;
+    color: #000;
     cursor: pointer !important;
     display: inline-flex;
     fill: currentcolor;
@@ -51,6 +51,11 @@
     will-change: transform, opacity;
     z-index: 0;
     cursor: none;
+
+    img {
+        width: 30px;
+        margin: 0 10px;
+    }
 }
 
 .second_fold_block {

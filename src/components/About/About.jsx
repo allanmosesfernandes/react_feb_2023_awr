@@ -3,7 +3,8 @@ import "./about.scss";
 import WorkTimeLine from '../Work/WorkTimeLine';
 import Quote from "../../assets/images/quotesvg.svg";
 import SkillsComponent from '../Skills/SkillsComponent';
-
+import DogFace from "../../assets/images/dog-face.png";
+import Peachy from "../../assets/images/peachy.png";
 
 const About = () => {
     
@@ -76,7 +77,7 @@ return (
         <h2>Hi there, I'm <span style={{color:"#ff5757"}}>Ankan.</span></h2>
         <div className="second_fold_block">
             <div>
-                <button className='about_me_btn'>🐶 Lover & Beach 🍑</button>
+                <button className='about_me_btn'><img src={DogFace}/> Lover & Beach <img src={Peachy} /></button>
             </div>
 
             <div className="about__me__txt">
