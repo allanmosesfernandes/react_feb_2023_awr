@@ -39,7 +39,7 @@ const Writing = () => {
           const options = { month: 'short', day: 'numeric', year: 'numeric' };
           const formattedDate = date.toLocaleString('en-US', options);
           let postCategory = post.categories[0];
-          const categoryNameWithoutAmp = postCategory.replace(/&amp;/g, '&');
+          // const categoryNameWithoutAmp = postCategory.replace(/&amp;/g, '&');
 
           return (
             <div className="blog__preview__div" key={index} onClick={() => navigate(`/blog/${post.slug}`)}>
@@ -48,7 +48,7 @@ const Writing = () => {
               <div className="blog__preview__bottom">
                 <div className="blog__preview__date"><span><hr /></span>{formattedDate}</div>
                 <div className="blog__preview__category">
-                  {categoryNameWithoutAmp}
+                  {postCategory}
                 </div>
               </div>
             </div>
