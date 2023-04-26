@@ -35,7 +35,7 @@ const WorkTimeLine = () => {
 
       <VerticalTimelineElement
         className="vertical-timeline-element--work"
-        date="May’18-July’21"
+        date="Apr’21 - May’21"
         iconStyle={{ background: '#ff5757', color: '#fff' }}
         icon={<SchoolIcon />}>
         <h5 className="vertical-timeline-element-title">London, UK</h5>
@@ -65,7 +65,7 @@ const WorkTimeLine = () => {
 
       <VerticalTimelineElement
         className="vertical-timeline-element--work"
-        date="Oct’16-May’18"
+        date="Sep’15 - Dec’15"
         iconStyle={{ background: '#ff5757', color: '#fff' }}
         icon={<SchoolIcon />}>
         <h5 className="vertical-timeline-element-title">Paris, France</h5>
@@ -75,7 +75,7 @@ const WorkTimeLine = () => {
 
       <VerticalTimelineElement
         className="vertical-timeline-element--work"
-        date="July’14-May’16"
+        date="July’14 - May’16"
         iconStyle={{ background: '#ff5757', color: '#fff' }}
         icon={<SchoolIcon />}>
         <h5 className="vertical-timeline-element-title">Gandhinagar, India</h5>
@@ -85,7 +85,7 @@ const WorkTimeLine = () => {
 
       <VerticalTimelineElement
         className="vertical-timeline-element--work"
-        date="July’13 - July'09"
+        date="July’09 - July'13"
         iconStyle={{ background: '#ff5757', color: '#fff' }}
         icon={<SchoolIcon />}>
         <h5 className="vertical-timeline-element-title">Nagpur, India</h5>
