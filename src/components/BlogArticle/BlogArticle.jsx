@@ -84,9 +84,9 @@ const BlogArticle = () => {
               <p className="blog__preview__title">{post.title.rendered}</p>
               <div className="blog__preview__bottom">
                 <div className="blog__preview__date"><span><hr /></span>{formattedDate}</div>
-                <div className="blog__preview__category related">
+                {/* <div className="blog__preview__category related">
                   {postCategory}
-                </div>
+                </div> */}
               </div>
             </div>
           })
