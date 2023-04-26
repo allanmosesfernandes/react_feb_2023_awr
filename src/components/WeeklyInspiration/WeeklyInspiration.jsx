@@ -22,7 +22,8 @@ const WeeklyInspiration = () => {
       <div className="image__grid__container">
         { isLoading ? (<div className="loader" style={{display:"flex"}}></div>) : (images.map((image, index) => {
           if(index < 5) {
-          let imageURL = image.image_url;
+          let imageURL = image.featured_image_url;
+          console.log(imageURL)
           let group = index % 5; 
           const excerptElement = image.excerpt.rendered;
           const excerptText = document.createElement('div');
