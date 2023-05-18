@@ -110,3 +110,19 @@
         margin-bottom: 5rem;
     }
 }
+
+
+.share-buttons {
+    display: flex;
+    flex-direction: column;
+    margin-right: auto;
+
+    @media only screen and (max-width: 800px) {
+        margin: auto; 
+      }
+}
+
+
+.social_icon_container {
+    color: white;
+}

@@ -4,7 +4,8 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { ShareButtons, WhatsappShareButton,FacebookShareButton, LinkedinShareButton } from 'react-share';
 import { Helmet } from 'react-helmet';
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLinkedinIn, faWhatsapp, faFacebookF } from '@fortawesome/free-brands-svg-icons';
 
 const BlogArticle = () => {
 
@@ -67,15 +68,32 @@ const BlogArticle = () => {
           
           <div className="blog__article__content" dangerouslySetInnerHTML={{ __html: post.content.rendered }} />
           <div className="share-buttons">
-          <FacebookShareButton url={`https://ankanchittalipi.com/blog/${post.slug}`}>
-            Share on Facebook
-          </FacebookShareButton>
-          <WhatsappShareButton url={`https://ankanchittalipi.com/blog/${post.slug}`}>
-            Share on WhatsApp
-          </WhatsappShareButton>
-          <LinkedinShareButton url={`https://ankanchittalipi.com/blog/${post.slug}`}>
-            Share on Linkedin
-          </LinkedinShareButton>
+          <h3>Share this:</h3>
+
+            <div className="footer__links__social">
+                <div className="socials">
+                    <div className='social_icon_container '>
+                      <FacebookShareButton url={`https://ankanchittalipi.com/blog/${post.slug}`}>
+                        <FontAwesomeIcon icon={faFacebookF} size="2x"/>
+                      </FacebookShareButton>
+                    </div>
+                </div>
+                <div className="socials">
+                    <div className='social_icon_container '>
+                    <WhatsappShareButton url={`https://ankanchittalipi.com/blog/${post.slug}`}>
+                            <FontAwesomeIcon icon={faWhatsapp} size="2x" />
+                    </WhatsappShareButton>
+                    </div>
+                </div>
+                <div className="socials">
+                    <div className='social_icon_container '>
+                    <LinkedinShareButton url={`https://ankanchittalipi.com/blog/${post.slug}`}>
+                            <FontAwesomeIcon icon={faLinkedinIn} size="2x" />
+                    </LinkedinShareButton>
+                        
+                    </div>
+                </div>
+            </div>
         </div>
         </div>
       ) : (
