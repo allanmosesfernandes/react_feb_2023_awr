@@ -63,7 +63,7 @@ const BlogArticle = () => {
         </div>
           
           <div className="blog__article__content" dangerouslySetInnerHTML={{ __html: post.content.rendered }} />
-          <div className="share-buttons">
+          {/* <div className="share-buttons">
           <FacebookShareButton url={`https://ankanchittalipi.com/blog/${post.slug}`}>
             Share on Facebook
           </FacebookShareButton>
@@ -73,7 +73,7 @@ const BlogArticle = () => {
           <LinkedinShareButton url={`https://ankanchittalipi.com/blog/${post.slug}`}>
             Share on Linkedin
           </LinkedinShareButton>
-        </div>
+        </div> */}
         </div>
       ) : (
         <p className="load"><span className="loader"></span></p>
