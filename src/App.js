@@ -14,10 +14,12 @@ function App() {
   return (
   <>
   <Helmet>
-      <title>df</title>
+      <title>Ankan Chittalipi</title>
         <meta name="title" content="Ankan Chittalipi - Fashion Merchandiser and Buyer" />
-        <meta property="og:description" content="Keep yourself updated on the Whats, Where & Whys in Fashion, Culture & Lifestyle with Ankan Chittalipi, a Fashion Merchandiser and Buyer." />
-        <meta property="og:image" content="http://blog.ankanchittalipi.com/wp-content/uploads/2023/05/linkedinpreview.jpg" />
+        <meta name="description" property="og:description" content="Keep yourself updated on the Whats, Where & Whys in Fashion, Culture & Lifestyle with Ankan Chittalipi, a Fashion Merchandiser and Buyer." />
+        <meta name="image" property="og:image" content="http://blog.ankanchittalipi.com/wp-content/uploads/2023/05/linkedinpreview.jpg" />
+        <meta name="author" content="Ankan Chittalipi" />
+
     </Helmet>
     <Routes>
       <Route path='/' element={<Header />}>

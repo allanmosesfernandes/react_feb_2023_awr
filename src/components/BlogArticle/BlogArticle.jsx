@@ -49,7 +49,7 @@ const BlogArticle = () => {
       
       <Helmet>
         <meta name="title" content={post.title.rendered} />
-        <meta property="og:description" content={post.title.rendered} />
+        <meta name="description" property="og:description" content={post.title.rendered} />
         <meta property='og:url' content={`https://ankanchittalipi.com/blog/${post.slug}`} />
       </Helmet>
     ) : ""
