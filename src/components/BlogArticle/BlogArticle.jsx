@@ -2,6 +2,7 @@ import "./blog-article.scss";
 import { useParams, useNavigate } from 'react-router-dom'
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import { ShareButtons, WhatsappShareButton,FacebookShareButton, LinkedinShareButton } from 'react-share';
 
 
 const BlogArticle = () => {
@@ -51,6 +52,17 @@ const BlogArticle = () => {
         </div>
           
           <div className="blog__article__content" dangerouslySetInnerHTML={{ __html: post.content.rendered }} />
+          <div className="share-buttons">
+          <FacebookShareButton url={`https://ankanchittalipi.com/blog/${post.slug}`}>
+            Share on Facebook
+          </FacebookShareButton>
+          <WhatsappShareButton url={`https://ankanchittalipi.com/blog/${post.slug}`}>
+            Share on WhatsApp
+          </WhatsappShareButton>
+          <LinkedinShareButton url={`https://ankanchittalipi.com/blog/${post.slug}`}>
+            Share on WhatsApp
+          </LinkedinShareButton>
+        </div>
         </div>
       ) : (
         <p className="load"><span className="loader"></span></p>
