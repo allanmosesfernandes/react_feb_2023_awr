@@ -8,11 +8,17 @@ import BlogArticle from './components/BlogArticle/BlogArticle';
 import Merchandiser from './components/Merchandiser/Merchandiser';
 import About from './components/About/About';
 import BlogListing from './components/BlogListing/BlogListing';
-
+import { Helmet } from 'react-helmet';
 function App() {
   
   return (
-<>
+  <>
+  <Helmet>
+      <title>df</title>
+        <meta name="title" content="Ankan Chittalipi - Fashion Merchandiser and Buyer" />
+        <meta property="og:description" content="Keep yourself updated on the Whats, Where & Whys in Fashion, Culture & Lifestyle with Ankan Chittalipi, a Fashion Merchandiser and Buyer." />
+        <meta property="og:image" content="http://blog.ankanchittalipi.com/wp-content/uploads/2023/05/linkedinpreview.jpg" />
+    </Helmet>
     <Routes>
       <Route path='/' element={<Header />}>
         <Route index element={<FirstFold />} />
