@@ -13,13 +13,7 @@ function App() {
   
   return (
   <>
-  <Helmet>
-      <title>Ankan Chittalipi</title>
-        <meta name="title" content="Ankan Chittalipi - Fashion Merchandiser and Buyer" />
-        <meta name="description" property="og:description" content="Keep yourself updated on the Whats, Where & Whys in Fashion, Culture & Lifestyle with Ankan Chittalipi, a Fashion Merchandiser and Buyer." />
-        <meta name="author" content="Ankan Chittalipi" />
 
-    </Helmet>
     <Routes>
       <Route path='/' element={<Header />}>
         <Route index element={<FirstFold />} />

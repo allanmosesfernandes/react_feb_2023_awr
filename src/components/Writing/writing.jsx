@@ -62,7 +62,6 @@ const Writing = () => {
           const formattedDate = date.toLocaleString("en-US", options);
           const categoryId = post.categories[0];
           const categoryName = categories[categoryId].replace(/&amp;/g, '&');
-          console.log(categoryName);
           return (
             <div
               className="blog__preview__div"
