@@ -3,6 +3,7 @@ import { useParams, useNavigate } from 'react-router-dom'
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { ShareButtons, WhatsappShareButton,FacebookShareButton, LinkedinShareButton } from 'react-share';
+import { Helmet } from 'react-helmet';
 
 
 const BlogArticle = () => {
@@ -43,6 +44,16 @@ const BlogArticle = () => {
 
   return (
     <>
+    { 
+    post ? (    
+      <Helmet>
+        <meta property="og:title" content={post.title.rendered} />
+        <meta property="og:description" content={post.excerpt.rendered} />
+        <meta property="og:image" content={post.jetpack_featured_media_url} />
+      </Helmet> 
+    ) : ""
+    }
+
     <div className='wrapper blog__article'>
     {post ? (
         <div className="blog__article__wrapper">
@@ -60,7 +71,7 @@ const BlogArticle = () => {
             Share on WhatsApp
           </WhatsappShareButton>
           <LinkedinShareButton url={`https://ankanchittalipi.com/blog/${post.slug}`}>
-            Share on WhatsApp
+            Share on Linkedin
           </LinkedinShareButton>
         </div>
         </div>
