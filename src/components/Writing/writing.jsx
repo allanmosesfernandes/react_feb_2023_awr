@@ -55,6 +55,7 @@ const Writing = () => {
 
       <div className="blog__preview__container">
         {posts.map((post, index) => {
+          if (index > 2) return null;
           const imageUrl = post.jetpack_featured_media_url;
           const dateString = post.date.split("T")[0];
           const date = new Date(dateString);
