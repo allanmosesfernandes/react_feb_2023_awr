@@ -6,13 +6,13 @@ const WeeklyInspiration = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    fetch('https://blog.ankanchittalipi.com/wp-json/wp/v2/weekly_inspiration/')
-      .then(response => response.json())
-      .then(data => {
-        setImages(data)
+    fetch("https://blog.ankanchittalipi.com/wp-json/wp/v2/weekly_inspiration/")
+      .then((response) => response.json())
+      .then((data) => {
+        setImages(data);
         setIsLoading(false);
       })
-      .catch(error => console.error(error));
+      .catch((error) => console.error(error));
   }, []);
   return (
     <div className='weekly__inspiration '>
@@ -22,8 +22,7 @@ const WeeklyInspiration = () => {
       <div className="image__grid__container">
         { isLoading ? (<div className="loader" style={{display:"flex"}}></div>) : (images.map((image, index) => {
           if(index < 5) {
-          let imageURL = image.featured_image_url;
-          console.log(imageURL)
+          let imageURL = image?.yoast_head_json?.og_image[0]?.url;
           let group = index % 5; 
           const excerptElement = image.excerpt.rendered;
           const excerptText = document.createElement('div');
