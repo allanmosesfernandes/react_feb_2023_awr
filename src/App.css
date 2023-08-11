@@ -45,7 +45,7 @@ body {
   background-color: var(--body-color);
   color: var(--base-font-color);
   font-family: "Inter", monospace;
-  font-weight: 100;
+  font-weight: 400;
   font-style: normal;
   font-size: var(--small-text-size);
   overflow-x: hidden;

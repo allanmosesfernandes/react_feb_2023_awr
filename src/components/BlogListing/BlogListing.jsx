@@ -2,6 +2,7 @@ import {React, useState, useEffect} from 'react';
 import "./bloglisting.scss";
 import { useNavigate, Link, Navigate } from "react-router-dom";
 import axios from "axios";
+import { Fade } from "react-awesome-reveal";
 
 
 const BlogListing = () => {
@@ -63,16 +64,23 @@ const BlogListing = () => {
             const formattedDate = formatDate(post.date);
 
             return (
-              <div className="blog__listing__div" key={index} onClick={() => navigate(`/blog/${post.slug}`)}>
-                <div className="number">{index < 10 ? `0${index + 1}` : index + 1}.</div>
-                <div className="listing__image">
-                  <img src={imageUrl} alt="" />
+              <Fade bottom key={index}>
+                <div
+                  className="blog__listing__div"
+                  onClick={() => navigate(`/blog/${post.slug}`)}
+                >
+                  <div className="number">
+                    {index < 10 ? `0${index + 1}` : index + 1}.
+                  </div>
+                  <div className="listing__image">
+                    <img src={imageUrl} alt="" />
+                  </div>
+                  <div className="listing__details">
+                    <p className="listing__date">{formattedDate}</p>
+                    <h3 className="listing-title">{post.title.rendered}</h3>
+                  </div>
                 </div>
-                <div className="listing__details">
-                  <p className="listing__date">{formattedDate}</p>
-                  <h3 className="listing-title">{post.title.rendered}</h3>
-                </div>
-              </div>
+              </Fade>
             );
           })}
         </div>
