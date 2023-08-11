@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;400;700?family=Inter:wght@100&display=swap');
 
 :root {
   --body-color: #E8E8EA;
@@ -6,7 +6,7 @@
   --base-font-color: #000;
   --extra-large-text: 8rem;
   --large-text-size: 5rem;
-  --medium-text-size: 3rem;
+  --medium-text-size: 2rem;
   --small-text-size: 1.6rem;
   --body-padding: 3rem;
   --theme-color: #ff5757;
@@ -44,8 +44,8 @@ body {
   padding: 0;
   background-color: var(--body-color);
   color: var(--base-font-color);
-  font-family: "sf-pro", monospace;
-  font-weight: 400;
+  font-family: "Inter", monospace;
+  font-weight: 100;
   font-style: normal;
   font-size: var(--small-text-size);
   overflow-x: hidden;

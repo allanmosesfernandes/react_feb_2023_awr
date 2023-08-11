@@ -1,66 +1,66 @@
 .weekly__inspiration {
-    flex-direction: column;
-    padding: var(--body-padding);
-    font-family: "sf-pro";
+  flex-direction: column;
+  padding: var(--body-padding);
+  font-family: "sf-pro";
 
-    h2 {
-        font-size: var(--large-text-size);
-    }
+  h2 {
+    font-size: var(--large-text-size);
+  }
 
-    p {
-        font-size: var(--medium-text-size);
-    }
+  p {
+    font-size: var(--medium-text-size);
+  }
 
-    background-color: #333333;
-    color: #fff;
+  background-color: #333333;
+  color: #fff;
 }
 
 .smally {
-    margin-right: auto;
+  margin-right: auto;
 }
 .secondary.smally {
-    img {
-        object-fit: contain;
-    }
+  img {
+    object-fit: contain;
+  }
 }
 .image__grid__container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 3rem;
-    margin: 5rem 0;
-    .highlight {
-        grid-column: 1 / span 1;
-        grid-row: 1 / span 2;
-    }
-}
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+  margin: 5rem 0;
+  .highlight {
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 2;
+  }
+  .image__grid__images {
+    filter: grayscale(1);
+    transition: all 300ms ease-in;
 
+    &:hover {
+      filter: grayscale(0);
+    }
+  }
+}
 
 .image__grid__images img {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
 }
-
 
 @media only screen and (max-width: 600px) {
-    .weekly__inspiration {
-
-
+  .weekly__inspiration {
     h2 {
-       margin-top: 3rem;
+      margin-top: 3rem;
     }
-}
+  }
   //code goes here
-// width: 100%;
-//     grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-//     
-//     grid-auto-flow: column;
-//     gap: 0;
-//     overflow-x: scroll;
-
-
-
-
+  // width: 100%;
+  //     grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  //
+  //     grid-auto-flow: column;
+  //     gap: 0;
+  //     overflow-x: scroll;
 
   .image__grid__container {
     grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
@@ -71,22 +71,25 @@
     margin: 3rem 0 5rem 0;
 
     .highlight {
-        grid-column: 1;
-        grid-row: 1;
-            white-space: normal;
-    display: inline-block;
+      grid-column: 1;
+      grid-row: 1;
+      white-space: normal;
+      display: inline-block;
     }
 
     * {
-        cursor: pointer;
+      cursor: pointer;
     }
-}
-.smally {
+    .image__grid__images {
+      filter: grayscale(0);
+    }
+  }
+  .smally {
     height: 100%;
-}
-.secondary.smally {
+  }
+  .secondary.smally {
     img {
-        object-fit: cover;
+      object-fit: cover;
     }
-}
+  }
 }

@@ -34,7 +34,7 @@ return (
 
             <div className="about__me__txt">
                 <p>
-                    A strategist by heart, I specialize in <span style={{color:"#ff5757"}}>buying & merchandising</span> with <strong>5+ years</strong>  of work experience with premium international brands and currently widening my portfolio in the luxury sphere as a buyer.
+                    A strategist by heart, I specialize in <span style={{color:"#ff5757", fontWeight: "bold"}}>buying & merchandising</span> with <strong>5+ years</strong>  of work experience with premium international brands and currently widening my portfolio in the luxury sphere as a buyer.
                 </p>
                  <p>
                     Zealous about menswear & womenswear RTW, menswear & womenswear athleisure, menswear & womenswear sport, leather home & accessories.

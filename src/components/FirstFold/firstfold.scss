@@ -1,11 +1,12 @@
 .first-fold {
     height: 100%;
-    padding: 2rem 3rem;
+    padding: 0rem 3rem;
     display: grid;
-    grid-template-columns: 2fr 2fr 1fr;
+    grid-template-columns: 1fr 2fr;
     font-size: var(--medium-text-size);
     gap: 2rem;
     position: relative;
+    align-items: center;
 }
 
 .future-of-fashion {
@@ -13,12 +14,10 @@
     font-size: 8rem;
     margin: 0;
     line-height: 1;
-
     p {
         margin: 3rem 0 5rem 0;
     }
 }
-
 
 .picture__details {
     display: grid;
@@ -46,12 +45,13 @@
 
     .ankan_img {
         filter: grayscale(1);
-        display: block;
-        width: auto;
-        height: auto;
         max-width: 100%;
+        object-fit: contain;
+        height: auto;
+        width: 100%;
         max-height: 90%;
         margin: 20px auto;
+        position: relative;
     }
 
     img {
@@ -60,8 +60,9 @@
 
     .thread {
         position: absolute;
-        top: 10%;
-        right: -80%;
+        right: -150px;
+        bottom: 10%;
+        width: 500px;
     }
 }
 
@@ -72,8 +73,8 @@
 .body-copy {
     font-size: var(--small-text-size);
     line-height: 1.5;
-    font-family: 'sf-pro';
-
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
 }
 
 @media only screen and (max-width: 767px) {

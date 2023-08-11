@@ -30,11 +30,10 @@ nav {
     font-size: var(--large-text-size);
     justify-content: space-between;
     align-items: center;
-    padding: 2rem 3rem;
+    padding: 1rem 2rem;
     font-family: 'Inconsolata', monospace;
     position: sticky;
     top: 0;
-    height: 10vh;
     z-index: 3;
     transition: all 0.3s ease-in;
 }

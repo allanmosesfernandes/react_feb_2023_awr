@@ -34,7 +34,7 @@ const WeeklyInspiration = () => {
 
           return (
             <div key={index} className={`image__grid__images ${highlightImage} ${smallest}`}>
-              <img src={imageURL} alt={`imageTitle`} title={plainExcerpt} />
+              <img src={imageURL} alt={`imageTitle`}  />
             </div>
           );
           }
