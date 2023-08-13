@@ -5,7 +5,7 @@ import "./weeklyinspiration.scss";
 const WeeklyInspiration = () => {
   const [images, setImages] = useState(TEMP_IMAGES_WEEKLY_INSPIRATION);
   useEffect(() => {
-    fetch("https://blog.ankanchittalipi.com/wp-json/wp/v2/weekly_inspirations/")
+    fetch("https://blog.ankanchittalipi.com/wp-json/wp/v2/weekly_inspiration/")
       .then((response) => response.json())
       .then((data) => {
            if (data && data.length > 0) {
