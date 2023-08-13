@@ -35,7 +35,7 @@
   .image__grid__images {
     filter: grayscale(1);
     transition: all 300ms ease-in;
-
+    overflow: hidden;
     &:hover {
       filter: grayscale(0);
     }
@@ -92,4 +92,9 @@
       object-fit: cover;
     }
   }
+}
+
+
+.highlightColor {
+  color: #ff5757;
 }
