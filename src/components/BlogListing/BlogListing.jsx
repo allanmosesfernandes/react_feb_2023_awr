@@ -5,13 +5,15 @@ import axios from "axios";
 import { Fade } from "react-awesome-reveal";
 import { formatDate } from "../../utils/utilis";
 import BlogListingShimmer from "./BlogShimmer";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 
 const BlogListing = () => {
   const [posts, setPosts] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [filteredPosts, setFilteredPosts] = useState([]);
   const [searchText, setSearchText] = useState("");
-  
+
   const navigate = useNavigate();
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -35,25 +37,25 @@ const BlogListing = () => {
         Sometimes I write about stuff that just makes <span>sense-</span>{" "}
       </h2>
       <form role="search" className="search__form">
-        <input
-          type="search"
-          placeholder="Search"
-          className="search__input"
-          value={searchText}
-          id="search-posts"
-          onChange={(e) => {
-            const userInput = e.target.value.toLowerCase();
-            setSearchText(userInput);
-            const filteredList = posts.filter((post) => {
-              return post.title.rendered.toLowerCase().includes(userInput);
-            });
-            setFilteredPosts(filteredList);
-            console.log(filteredPosts);
-          }}
-        />
-        <label htmlFor="search-posts" className="visually-hidden">
-          Search:
-        </label>
+        <div className="search__wrapper">
+          <input
+            type="search"
+            placeholder="Search Posts"
+            className="search__input"
+            value={searchText}
+            id="search-posts"
+            onChange={(e) => {
+              const userInput = e.target.value.toLowerCase();
+              setSearchText(userInput);
+              const filteredList = posts.filter((post) => {
+                return post.title.rendered.toLowerCase().includes(userInput);
+              });
+              setFilteredPosts(filteredList);
+            }}
+          />
+          <FontAwesomeIcon className="magnify" icon={faMagnifyingGlass} />
+        </div>
+
       </form>
 
       {isLoading ? (
