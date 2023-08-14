@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { TEMP_IMAGES_WEEKLY_INSPIRATION } from "../.././constants/constant";
+import { TEMP_IMAGES_WEEKLY_INSPIRATION } from "../../utils/constant";
 import "./weeklyinspiration.scss";
 
 const WeeklyInspiration = () => {

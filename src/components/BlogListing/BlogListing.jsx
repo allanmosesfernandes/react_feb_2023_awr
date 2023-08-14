@@ -1,50 +1,28 @@
-import {React, useState, useEffect} from 'react';
+import { React, useState, useEffect } from "react";
 import "./bloglisting.scss";
-import { useNavigate, Link, Navigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { Fade } from "react-awesome-reveal";
-
+import { formatDate } from "../../utils/utilis";
+import BlogListingShimmer from "./BlogShimmer";
 
 const BlogListing = () => {
   const [posts, setPosts] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
-
+  const [filteredPosts, setFilteredPosts] = useState([]);
+  const [searchText, setSearchText] = useState("");
+  
   const navigate = useNavigate();
-
-  function formatDate(dateString) {
-    const date = new Date(dateString);
-    const day = date.getDate();
-    const suffix = getOrdinalSuffix(day);
-    const options = { day: 'numeric', month: 'long', year: 'numeric' };
-    const formattedDate = date.toLocaleDateString('en-US', options);
-    return formattedDate.replace(`${day}`, `${day}${suffix}`);
-  }
-  
-  function getOrdinalSuffix(day) {
-    if (day >= 11 && day <= 13) {
-      return 'th';
-    }
-  
-    const lastDigit = day % 10;
-    switch (lastDigit) {
-      case 1:
-        return 'st';
-      case 2:
-        return 'nd';
-      case 3:
-        return 'rd';
-      default:
-        return 'th';
-    }
-  }
-  
- useEffect(() => {
-  window.scrollTo(0,0);
-        axios.get("https://blog.ankanchittalipi.com/wp-json/wp/v2/posts")
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    axios
+      .get("https://blog.ankanchittalipi.com/wp-json/wp/v2/posts")
       .then((response) => {
-        const fetchedPosts = response.data;
-        setPosts(fetchedPosts);
-        setIsLoading(false);
+        if (response.data && response.data.length > 0) {
+          setPosts(response.data);
+          setFilteredPosts(response.data);
+          setIsLoading(false);
+        }
       })
       .catch((error) => {
         console.log(error);
@@ -52,20 +30,46 @@ const BlogListing = () => {
   }, []);
 
   return (
-    <div className='wrapper blog__listing'>
-      <h2>Sometimes I write about stuff that just makes <span>sense-</span> </h2>
+    <div className="wrapper blog__listing">
+      <h2>
+        Sometimes I write about stuff that just makes <span>sense-</span>{" "}
+      </h2>
+      <form role="search" className="search__form">
+        <input
+          type="search"
+          placeholder="Search"
+          className="search__input"
+          value={searchText}
+          id="search-posts"
+          onChange={(e) => {
+            const userInput = e.target.value.toLowerCase();
+            setSearchText(userInput);
+            const filteredList = posts.filter((post) => {
+              return post.title.rendered.toLowerCase().includes(userInput);
+            });
+            setFilteredPosts(filteredList);
+            console.log(filteredPosts);
+          }}
+        />
+        <label htmlFor="search-posts" className="visually-hidden">
+          Search:
+        </label>
+      </form>
+
       {isLoading ? (
-        <div className="loader"></div>
+        <BlogListingShimmer />
       ) : (
         <div className="blog__listing__container">
-          {posts.map((post, index) => {
+          {filteredPosts.map((post, index) => {
             const imageUrl = post.jetpack_featured_media_url;
-            const year = post.date.split("-")[0];
             const formattedDate = formatDate(post.date);
+            const title = post.title.rendered;
+            const postID = post.id;
 
             return (
-              <Fade bottom key={index}>
+              <Fade bottom key={postID}>
                 <div
+                  role="button"
                   className="blog__listing__div"
                   onClick={() => navigate(`/blog/${post.slug}`)}
                 >
@@ -73,11 +77,11 @@ const BlogListing = () => {
                     {index < 10 ? `0${index + 1}` : index + 1}.
                   </div>
                   <div className="listing__image">
-                    <img src={imageUrl} alt="" />
+                    <img src={imageUrl} alt={title} />
                   </div>
                   <div className="listing__details">
                     <p className="listing__date">{formattedDate}</p>
-                    <h3 className="listing-title">{post.title.rendered}</h3>
+                    <h3 className="listing-title">{title}</h3>
                   </div>
                 </div>
               </Fade>
@@ -86,7 +90,7 @@ const BlogListing = () => {
         </div>
       )}
     </div>
-  )
-}
+  );
+};
 
-export default BlogListing
+export default BlogListing;
