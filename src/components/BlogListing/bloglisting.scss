@@ -107,8 +107,8 @@
   background: transparent;
   border-radius: 30px;
   &:focus {
-    outline: 2px solid gray;
-    border: none;
+    outline: 2px solid #dfd5d5;
+    border: 2px solid transparent;
   }
 }
 
