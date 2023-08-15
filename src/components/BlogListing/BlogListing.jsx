@@ -1,5 +1,6 @@
 import { React, useState, useEffect } from "react";
 import "./bloglisting.scss";
+import he from "he";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { Fade } from "react-awesome-reveal";
@@ -53,7 +54,7 @@ const BlogListing = () => {
               setFilteredPosts(filteredList);
             }}
           />
-          <FontAwesomeIcon className="magnify" icon={faMagnifyingGlass} />
+          <FontAwesomeIcon className="magnify" icon={faMagnifyingGlass} size="1x"/>
         </div>
 
       </form>
@@ -63,9 +64,10 @@ const BlogListing = () => {
       ) : (
         <div className="blog__listing__container">
           {filteredPosts.map((post, index) => {
-            const imageUrl = post.jetpack_featured_media_url;
+            const imageUrl = post?.jetpack_featured_media_url;
             const formattedDate = formatDate(post.date);
-            const title = post.title.rendered;
+            const blogTitle = post.title.rendered;
+            const title = he.decode(blogTitle);
             const postID = post.id;
 
             return (

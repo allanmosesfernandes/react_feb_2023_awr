@@ -2,6 +2,7 @@ import "./blog-article.scss";
 import { useParams, useNavigate } from 'react-router-dom'
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import he from "he";
 import { ShareButtons, WhatsappShareButton,FacebookShareButton, LinkedinShareButton } from 'react-share';
 import { Helmet } from 'react-helmet';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -62,7 +63,7 @@ const BlogArticle = () => {
     {post ? (
         <div className="blog__article__wrapper">
         <div className="blog__article__intro">
-            <h2 className="blog__art">{post.title.rendered}</h2>
+            <h2 className="blog__art" style={{textAlign: "center"}}>{he.decode(post.title.rendered)}</h2>
             <div className="blog__preview__date"><span><hr /></span>{formattedDate}</div>
         </div>
           

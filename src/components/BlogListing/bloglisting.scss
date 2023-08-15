@@ -56,9 +56,9 @@
   font-size: 1.5rem;
 }
 .listing__details {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 @media only screen and (max-width: 600px) {
   .blog__listing {
@@ -112,13 +112,13 @@
   }
 }
 
-  .magnify {
-    position: absolute;
-    top: 50%;
-    right: 20px;
-    transform: translateY(-50%);
-    color: gray;
-  }
+.magnify {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  color: gray;
+}
 .search__wrapper {
   position: relative;
   width: 80%;

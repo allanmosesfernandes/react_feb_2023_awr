@@ -5,6 +5,7 @@ import BlogImage from "../../assets/images/blog_preview.webp";
 import { Link, Navigate } from "react-router-dom";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import he from "he";
 
 const Writing = () => {
   const [posts, setPosts] = useState([]);
@@ -63,6 +64,9 @@ const Writing = () => {
           const formattedDate = date.toLocaleString("en-US", options);
           const categoryId = post.categories[0];
           const categoryName = categories[categoryId].replace(/&amp;/g, '&');
+          const blogTitle = post.title.rendered;
+          const title = he.decode(blogTitle);
+
           return (
             <div
               className="blog__preview__div"
@@ -70,7 +74,7 @@ const Writing = () => {
               onClick={() => navigate(`/blog/${post.slug}`)}
             >
               <img src={imageUrl} alt="" />
-              <p className="blog__preview__title">{post.title.rendered}</p>
+              <p className="blog__preview__title">{title}</p>
               <div className="blog__preview__bottom">
                 <div className="blog__preview__date">
                   <span>
