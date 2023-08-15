@@ -24,4 +24,14 @@ function formatDate(dateString) {
   return formattedDate.replace(`${day}`, `${day}${suffix}`);
 }
 
-export { formatDate };
+
+/* Date for Blog Article  */
+function articleDate(postDate) {
+  const dateString = postDate.date.split("T")[0];
+  const date = new Date(dateString);
+  const options = { month: "short", day: "numeric", year: "numeric" };
+  const formattedDate = date.toLocaleString("en-US", options);
+  return formattedDate;
+}
+
+export { formatDate, articleDate };
