@@ -32,7 +32,6 @@ return (
             <div>
                 <button className='about_me_btn'><img src={DogFace} title="Dog"/> Lover & Beach <img src={Peachy} title="Bum"/></button>
             </div>
-
             <div className="about__me__txt">
                 <p>
                     A strategist by heart, I specialize in <span style={{color:"#ff5757", fontWeight: "bold"}}>buying & merchandising</span> with <strong>5+ years</strong>  of work experience with premium international brands and currently widening my portfolio in the luxury sphere as a buyer.

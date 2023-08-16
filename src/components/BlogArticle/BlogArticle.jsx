@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./blog-article.scss";
 import { useParams } from "react-router-dom";
 import he from "he";
@@ -10,7 +10,15 @@ import SocialShare from "./SocialShare";
 const BlogArticle = () => {
   const { slug } = useParams();
   const { post, morePosts } = useBlogArticle(slug);
-
+  /* Fire off GA for every blog article */
+  useEffect(() => {
+    if(slug && window.gtag) {
+      // Send a pageview hit to GA with the specific path of the article
+      window.gtag("config", "G-PBB5MY7VXZ", {
+        page_path: `/blog/${slug}`,
+      });
+    }
+  }, [slug])
   return (
     <>
       <div className="wrapper blog__article">
