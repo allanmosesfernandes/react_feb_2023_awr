@@ -1,6 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { articleDate } from "../../utils/utilis";
+import he from "he";
 
 const RecommendedArticles = ({ morePosts }) => {
 
@@ -29,7 +30,10 @@ const RecommendedArticles = ({ morePosts }) => {
                   onClick={() => navigate(`/blog/${post.slug}`)}
                 >
                   <img src={imageUrl} alt="" />
-                  <p className="blog__preview__title">{post.title.rendered}</p>
+                  <p className="blog__preview__title">
+                    {" "}
+                    {he.decode(post.title.rendered)}
+                  </p>
                   <div className="blog__preview__bottom">
                     <div className="blog__preview__date">
                       <span>
