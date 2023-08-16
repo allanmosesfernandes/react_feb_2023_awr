@@ -12,7 +12,6 @@ import {
 } from "react-share";
 
 const SocialShare = ({ slug } ) => {
-    console.log(slug);
   return (
     <div className="share-buttons">
       <h3>Share this:</h3>
