@@ -1,9 +1,8 @@
 import React from "react";
 import axios from "axios";
-import { useEffect } from "react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
-function useBlogArticle( props ) {
+function useBlogArticle(props) {
     const slug  = props;
     useEffect(() => {
     axios
